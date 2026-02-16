@@ -17,7 +17,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-10 border border-gray-100 transform transition-all duration-500 hover:scale-[1.01]">
+    <div className="bg-slate-50 rounded-3xl shadow-[0_30px_70px_-10px_rgba(0,0,0,0.15)] p-8 md:p-10 border border-slate-200/60 transform transition-all duration-500 hover:scale-[1.01] relative z-10">
       <h3 className="text-2xl font-black text-[#202c44] mb-2 uppercase tracking-tighter">FALE CONNOSCO</h3>
       <p className="text-gray-500 mb-8 text-sm">Preencha o formulário e receba uma análise personalizada.</p>
       
@@ -28,7 +28,7 @@ const ContactForm: React.FC = () => {
             required
             type="text"
             placeholder="Ex: João Silva"
-            className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#202c44] focus:ring-2 focus:ring-[#202c44]/10 transition-all outline-none"
+            className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#202c44] focus:ring-2 focus:ring-[#202c44]/10 transition-all outline-none bg-white shadow-sm"
             value={formData.nome}
             onChange={e => setFormData({...formData, nome: e.target.value})}
           />
@@ -41,7 +41,7 @@ const ContactForm: React.FC = () => {
               required
               type="email"
               placeholder="email@empresa.com"
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#202c44] focus:ring-2 focus:ring-[#202c44]/10 transition-all outline-none"
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#202c44] focus:ring-2 focus:ring-[#202c44]/10 transition-all outline-none bg-white shadow-sm"
               value={formData.email}
               onChange={e => setFormData({...formData, email: e.target.value})}
             />
@@ -52,7 +52,7 @@ const ContactForm: React.FC = () => {
               required
               type="tel"
               placeholder="+351 900 000 000"
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#202c44] focus:ring-2 focus:ring-[#202c44]/10 transition-all outline-none"
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#202c44] focus:ring-2 focus:ring-[#202c44]/10 transition-all outline-none bg-white shadow-sm"
               value={formData.telemovel}
               onChange={e => setFormData({...formData, telemovel: e.target.value})}
             />
@@ -63,7 +63,7 @@ const ContactForm: React.FC = () => {
           <label className="block text-xs font-bold text-gray-700 uppercase mb-1.5 ml-1">Tipo de Serviço</label>
           <select
             required
-            className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#202c44] focus:ring-2 focus:ring-[#202c44]/10 transition-all outline-none appearance-none bg-white"
+            className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#202c44] focus:ring-2 focus:ring-[#202c44]/10 transition-all outline-none appearance-none bg-white shadow-sm"
             value={formData.servico}
             onChange={e => setFormData({...formData, servico: e.target.value})}
           >
@@ -81,7 +81,7 @@ const ContactForm: React.FC = () => {
           <textarea
             rows={3}
             placeholder="Como podemos ajudar o seu negócio?"
-            className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#202c44] focus:ring-2 focus:ring-[#202c44]/10 transition-all outline-none resize-none"
+            className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#202c44] focus:ring-2 focus:ring-[#202c44]/10 transition-all outline-none resize-none bg-white shadow-sm"
             value={formData.mensagem}
             onChange={e => setFormData({...formData, mensagem: e.target.value})}
           />

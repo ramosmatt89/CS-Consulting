@@ -13,7 +13,7 @@ const ContactMap: React.FC = () => {
               Desktop (lg+): Aparece depois (lg:order-2)
           */}
           <div className="lg:w-7/12 xl:w-8/12 order-1 lg:order-2">
-            <div className="bg-white rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 xl:p-16 shadow-[0_20px_60px_rgba(0,0,0,0.04)] border border-gray-100 relative z-10">
+            <div className="bg-slate-50 rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 xl:p-16 shadow-[0_30px_70px_-10px_rgba(0,0,0,0.1)] border border-slate-200/60 relative z-10">
               <div className="mb-10 text-center lg:text-left">
                 <span className="text-blue-600 font-black text-[10px] uppercase tracking-[0.4em] mb-4 block">Contacto Prioritário</span>
                 <h3 className="text-3xl md:text-4xl font-black text-[#121a2a] uppercase tracking-tighter mb-4">FALE <span className="text-blue-600">CONNOSCO</span></h3>
@@ -28,7 +28,7 @@ const ContactMap: React.FC = () => {
                     <input 
                       type="text" 
                       placeholder="Como devemos tratar?"
-                      className="w-full pl-14 pr-6 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:bg-white focus:border-blue-600 outline-none transition-all text-sm font-semibold text-[#121a2a]"
+                      className="w-full pl-14 pr-6 py-4 bg-white border border-gray-100 rounded-2xl focus:border-blue-600 outline-none transition-all text-sm font-semibold text-[#121a2a] shadow-sm"
                       required
                     />
                   </div>
@@ -42,7 +42,7 @@ const ContactMap: React.FC = () => {
                       <input 
                         type="email" 
                         placeholder="email@exemplo.pt"
-                        className="w-full pl-14 pr-6 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:bg-white focus:border-blue-600 outline-none transition-all text-sm font-semibold text-[#121a2a]"
+                        className="w-full pl-14 pr-6 py-4 bg-white border border-gray-100 rounded-2xl focus:border-blue-600 outline-none transition-all text-sm font-semibold text-[#121a2a] shadow-sm"
                         required
                       />
                     </div>
@@ -55,7 +55,7 @@ const ContactMap: React.FC = () => {
                       <input 
                         type="tel" 
                         placeholder="+351 9XX XXX XXX"
-                        className="w-full pl-14 pr-6 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:bg-white focus:border-blue-600 outline-none transition-all text-sm font-semibold text-[#121a2a]"
+                        className="w-full pl-14 pr-6 py-4 bg-white border border-gray-100 rounded-2xl focus:border-blue-600 outline-none transition-all text-sm font-semibold text-[#121a2a] shadow-sm"
                         required
                       />
                     </div>
@@ -69,23 +69,23 @@ const ContactMap: React.FC = () => {
                     <textarea 
                       rows={4}
                       placeholder="Como podemos ajudar o seu negócio?"
-                      className="w-full pl-14 pr-6 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:bg-white focus:border-blue-600 outline-none transition-all resize-none text-sm font-semibold text-[#121a2a]"
+                      className="w-full pl-14 pr-6 py-4 bg-white border border-gray-100 rounded-2xl focus:border-blue-600 outline-none transition-all resize-none text-sm font-semibold text-[#121a2a] shadow-sm"
                     ></textarea>
                   </div>
                 </div>
                 
                 <button 
                   type="submit" 
-                  className="group/btn w-full bg-[#121a2a] text-white py-5 rounded-2xl font-black text-xs uppercase tracking-[0.3em] hover:bg-blue-600 transition-all active:scale-[0.98] flex items-center justify-center gap-3"
+                  className="group/btn w-full bg-[#121a2a] text-white py-5 rounded-2xl font-black text-xs uppercase tracking-[0.3em] hover:bg-blue-600 transition-all active:scale-[0.98] flex items-center justify-center gap-3 shadow-xl shadow-blue-900/10"
                 >
                   ENVIAR MENSAGEM
                   <Send size={16} className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
                 </button>
               </form>
 
-              <div className="mt-10 flex gap-4 justify-center md:justify-start pt-8 border-t border-gray-50">
+              <div className="mt-10 flex gap-4 justify-center md:justify-start pt-8 border-t border-slate-200/60">
                 {[Facebook, Instagram, Linkedin].map((Icon, i) => (
-                  <a key={i} href="#" className="w-10 h-10 bg-gray-50 rounded-xl flex items-center justify-center text-[#121a2a] hover:bg-[#121a2a] hover:text-white transition-all">
+                  <a key={i} href="#" className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-[#121a2a] hover:bg-[#121a2a] hover:text-white transition-all border border-slate-100 shadow-sm">
                     <Icon size={18} />
                   </a>
                 ))}
