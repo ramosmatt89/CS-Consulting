@@ -42,9 +42,11 @@ const Benefits: React.FC = () => {
               {/* Imagem 3D 1 - Análise e Gráficos */}
               <div className="relative group overflow-hidden rounded-[2.5rem] shadow-2xl aspect-[4/5] bg-gray-100 transition-all duration-700 hover:shadow-blue-500/20">
                 <img 
-                  src="https://images.unsplash.com/photo-1611974717482-48a4788874d6?q=80&w=800&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1611974717482-48a4788874d6?auto=format,compress&q=75&w=800&fit=crop" 
                   alt="Financial Analysis 3D" 
                   className="w-full h-full object-cover transform transition-transform duration-[2000ms] group-hover:scale-110"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#121a2a]/60 to-transparent opacity-60 group-hover:opacity-20 transition-opacity"></div>
                 {/* Floating shine effect */}
@@ -54,9 +56,11 @@ const Benefits: React.FC = () => {
               {/* Imagem 3D 2 - Crescimento e Dados */}
               <div className="relative group overflow-hidden rounded-[2.5rem] shadow-2xl aspect-[4/5] mt-12 bg-gray-100 transition-all duration-700 hover:shadow-blue-500/20">
                 <img 
-                  src="https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?q=80&w=800&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?auto=format,compress&q=75&w=800&fit=crop" 
                   alt="Business Strategy 3D Coins" 
                   className="w-full h-full object-cover transform transition-transform duration-[2000ms] group-hover:scale-110"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#121a2a]/60 to-transparent opacity-60 group-hover:opacity-20 transition-opacity"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-[1500ms]"></div>

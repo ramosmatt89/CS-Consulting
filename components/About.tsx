@@ -23,6 +23,8 @@ const About: React.FC = () => {
                 src="https://www.dropbox.com/scl/fi/16y0oq3r33p4oxdk3mts9/Sobre-a-CS.jpeg?rlkey=0cg4uxmwwj5kzse9svfpuyyo3&st=6yrxrxmx&raw=1" 
                 alt="CS Consulting Office - Carnaxide" 
                 className="w-full h-full object-cover aspect-[4/3] transition-transform duration-1000 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-[#202c44]/10 group-hover:bg-transparent transition-colors duration-500"></div>
             </div>
@@ -77,7 +79,7 @@ const About: React.FC = () => {
               <div className="flex -space-x-3">
                 {[1, 2, 3].map(i => (
                   <div key={i} className="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-gray-200 shadow-sm hover:scale-110 transition-transform">
-                    <img src={`https://i.pravatar.cc/100?img=${i+10}`} alt="Equipa" className="w-full h-full object-cover" />
+                    <img src={`https://i.pravatar.cc/100?img=${i+10}`} alt="Equipa" className="w-full h-full object-cover" loading="lazy" />
                   </div>
                 ))}
                 <div className="w-10 h-10 rounded-full border-2 border-white bg-[#202c44] flex items-center justify-center text-[10px] text-white font-bold shadow-sm">

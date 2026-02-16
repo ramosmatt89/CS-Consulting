@@ -3,18 +3,18 @@ import React, { useRef, useState, useEffect } from 'react';
 import { Mail, Linkedin, ArrowRight, ArrowLeft } from 'lucide-react';
 
 const teamMembers = [
-  { id: 1, name: "Carlos Silva", role: "CEO & Founder", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop", email: "carlos.silva@cs-consulting.pt" },
-  { id: 2, name: "Mariana Santos", role: "Diretora Financeira", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop", email: "mariana.santos@cs-consulting.pt" },
-  { id: 3, name: "João Ferreira", role: "Consultor Fiscal Senior", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop", email: "joao.ferreira@cs-consulting.pt" },
-  { id: 4, name: "Ana Oliveira", role: "Gestora de RH", image: "https://images.unsplash.com/photo-1573496359-136d475583dc?q=80&w=800&auto=format&fit=crop", email: "ana.oliveira@cs-consulting.pt" },
-  { id: 5, name: "Pedro Martins", role: "Contabilista Certificado", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop", email: "pedro.martins@cs-consulting.pt" },
-  { id: 6, name: "Sofia Costa", role: "Auditoria Financeira", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop", email: "sofia.costa@cs-consulting.pt" },
-  { id: 7, name: "Miguel Rodrigues", role: "Consultoria Estratégica", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop", email: "miguel.rodrigues@cs-consulting.pt" },
-  { id: 8, name: "Beatriz Almeida", role: "Gestão de Clientes", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop", email: "beatriz.almeida@cs-consulting.pt" },
-  { id: 9, name: "André Costa", role: "Inovação Digital", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop", email: "andre.costa@cs-consulting.pt" },
-  { id: 10, name: "Cláudia Sousa", role: "Legal & Compliance", image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop", email: "claudia.sousa@cs-consulting.pt" },
-  { id: 11, name: "Tiago Mendes", role: "Análise de Risco", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop", email: "tiago.mendes@cs-consulting.pt" },
-  { id: 12, name: "Inês Pereira", role: "Comunicação Corporativa", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop", email: "ines.pereira@cs-consulting.pt" }
+  { id: 1, name: "Carlos Silva", role: "CEO & Founder", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format,compress&q=75&w=600&fit=crop", email: "carlos.silva@cs-consulting.pt" },
+  { id: 2, name: "Mariana Santos", role: "Diretora Financeira", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format,compress&q=75&w=600&fit=crop", email: "mariana.santos@cs-consulting.pt" },
+  { id: 3, name: "João Ferreira", role: "Consultor Fiscal Senior", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format,compress&q=75&w=600&fit=crop", email: "joao.ferreira@cs-consulting.pt" },
+  { id: 4, name: "Ana Oliveira", role: "Gestora de RH", image: "https://images.unsplash.com/photo-1573496359-136d475583dc?auto=format,compress&q=75&w=600&fit=crop", email: "ana.oliveira@cs-consulting.pt" },
+  { id: 5, name: "Pedro Martins", role: "Contabilista Certificado", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format,compress&q=75&w=600&fit=crop", email: "pedro.martins@cs-consulting.pt" },
+  { id: 6, name: "Sofia Costa", role: "Auditoria Financeira", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format,compress&q=75&w=600&fit=crop", email: "sofia.costa@cs-consulting.pt" },
+  { id: 7, name: "Miguel Rodrigues", role: "Consultoria Estratégica", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format,compress&q=75&w=600&fit=crop", email: "miguel.rodrigues@cs-consulting.pt" },
+  { id: 8, name: "Beatriz Almeida", role: "Gestão de Clientes", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format,compress&q=75&w=600&fit=crop", email: "beatriz.almeida@cs-consulting.pt" },
+  { id: 9, name: "André Costa", role: "Inovação Digital", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format,compress&q=75&w=600&fit=crop", email: "andre.costa@cs-consulting.pt" },
+  { id: 10, name: "Cláudia Sousa", role: "Legal & Compliance", image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format,compress&q=75&w=600&fit=crop", email: "claudia.sousa@cs-consulting.pt" },
+  { id: 11, name: "Tiago Mendes", role: "Análise de Risco", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format,compress&q=75&w=600&fit=crop", email: "tiago.mendes@cs-consulting.pt" },
+  { id: 12, name: "Inês Pereira", role: "Comunicação Corporativa", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format,compress&q=75&w=600&fit=crop", email: "ines.pereira@cs-consulting.pt" }
 ];
 
 const Team: React.FC = () => {
@@ -108,6 +108,7 @@ const Team: React.FC = () => {
                     alt={member.name}
                     className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-110"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 

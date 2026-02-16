@@ -16,6 +16,8 @@ const Footer: React.FC = () => {
                 src={logoUrl} 
                 alt="CS Consulting" 
                 className="h-24 md:h-20 w-auto object-contain brightness-0 opacity-80" 
+                loading="lazy"
+                decoding="async"
               />
               <p className="text-[10px] font-bold text-gray-400 tracking-[0.3em] uppercase mt-2">Premium Accounting</p>
             </div>
