@@ -14,7 +14,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPath }) => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -38,16 +38,17 @@ const Navbar: React.FC<NavbarProps> = ({ currentPath }) => {
       `}
     >
       <div className="container mx-auto px-6 lg:px-16 flex justify-between items-center">
-        {/* Brand/Logo Image - Mobile size increased as per previous request */}
-        <a href="#home" className="flex items-center group">
+        <a href="#home" className="flex items-center group h-20 md:h-24 lg:h-32">
           <img 
             src={logoUrl} 
             alt="CS Consulting & Accounting" 
-            className="h-20 md:h-24 lg:h-32 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+            className="h-full w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+            // @ts-ignore
+            fetchpriority="high"
+            decoding="async"
           />
         </a>
 
-        {/* Desktop Links */}
         <div className="hidden md:flex items-center space-x-10 lg:space-x-12">
           {navLinks.map((link) => (
             <a
@@ -62,7 +63,6 @@ const Navbar: React.FC<NavbarProps> = ({ currentPath }) => {
           ))}
         </div>
 
-        {/* Mobile Toggle */}
         <button 
           className="md:hidden p-2 text-white hover:text-blue-400 transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -72,7 +72,6 @@ const Navbar: React.FC<NavbarProps> = ({ currentPath }) => {
         </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-50 bg-[#121a2a] flex flex-col items-center justify-center space-y-10 animate-in fade-in zoom-in duration-300">
           <button 
@@ -86,6 +85,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPath }) => {
             src={logoUrl} 
             alt="CS Consulting" 
             className="h-28 w-auto mb-8"
+            decoding="async"
           />
 
           {navLinks.map((link) => (

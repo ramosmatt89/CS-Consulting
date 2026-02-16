@@ -4,21 +4,17 @@ import React from 'react';
 const Hero: React.FC = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center bg-[#121a2a] overflow-hidden">
-      {/* Dynamic Background Elements */}
       <div className="absolute inset-0 z-0">
-        {/* Deep blue gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#121a2a] via-[#121a2a]/90 to-transparent z-10" />
         
-        {/* Animated 3D Glass Bars Simulation */}
         <div className="absolute right-0 top-0 bottom-0 w-1/2 overflow-hidden pointer-events-none">
           <div className="relative h-full w-full">
-            <div className="absolute bottom-[10%] right-[10%] w-12 md:w-24 bg-white/5 backdrop-blur-3xl rounded-lg animate-float-slow opacity-50 md:opacity-100" style={{ height: '60%', animationDelay: '0s' }}></div>
-            <div className="absolute bottom-[10%] right-[22%] w-12 md:w-24 bg-white/10 backdrop-blur-2xl rounded-lg animate-float-slow opacity-50 md:opacity-100" style={{ height: '45%', animationDelay: '1s' }}></div>
-            <div className="absolute bottom-[10%] right-[34%] w-12 md:w-24 bg-white/5 backdrop-blur-xl rounded-lg animate-float-slow opacity-50 md:opacity-100" style={{ height: '30%', animationDelay: '2s' }}></div>
-            <div className="absolute bottom-[10%] right-[46%] w-12 md:w-24 bg-white/10 backdrop-blur-lg rounded-lg animate-float-slow opacity-50 md:opacity-100" style={{ height: '20%', animationDelay: '0.5s' }}></div>
+            <div className="absolute bottom-[10%] right-[10%] w-12 md:w-24 bg-white/5 backdrop-blur-3xl rounded-lg animate-float-slow opacity-50 md:opacity-100 will-change-transform" style={{ height: '60%', animationDelay: '0s' }}></div>
+            <div className="absolute bottom-[10%] right-[22%] w-12 md:w-24 bg-white/10 backdrop-blur-2xl rounded-lg animate-float-slow opacity-50 md:opacity-100 will-change-transform" style={{ height: '45%', animationDelay: '1s' }}></div>
+            <div className="absolute bottom-[10%] right-[34%] w-12 md:w-24 bg-white/5 backdrop-blur-xl rounded-lg animate-float-slow opacity-50 md:opacity-100 will-change-transform" style={{ height: '30%', animationDelay: '2s' }}></div>
+            <div className="absolute bottom-[10%] right-[46%] w-12 md:w-24 bg-white/10 backdrop-blur-lg rounded-lg animate-float-slow opacity-50 md:opacity-100 will-change-transform" style={{ height: '20%', animationDelay: '0.5s' }}></div>
             
-            {/* Glow effects */}
-            <div className="absolute top-1/4 right-1/4 w-64 md:w-96 h-64 md:h-96 bg-blue-500/20 blur-[80px] md:blur-[120px] rounded-full animate-pulse"></div>
+            <div className="absolute top-1/4 right-1/4 w-64 md:w-96 h-64 md:h-96 bg-blue-500/20 blur-[80px] md:blur-[120px] rounded-full animate-pulse will-change-opacity"></div>
           </div>
         </div>
       </div>
@@ -46,7 +42,6 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Bottom accent line */}
       <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
 
       <style>{`
@@ -57,6 +52,8 @@ const Hero: React.FC = () => {
         .animate-float-slow {
           animation: float-slow 8s ease-in-out infinite;
         }
+        .will-change-transform { will-change: transform; }
+        .will-change-opacity { will-change: opacity; }
       `}</style>
     </section>
   );

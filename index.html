@@ -5,25 +5,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CS Consulting & Accounting | Contabilidade em Portugal</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Preconnect & DNS-Prefetch to speed up external asset discovery -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://www.dropbox.com">
+    <link rel="dns-prefetch" href="https://esm.sh">
+
+    <!-- Preload critical LCP assets (Logo and Primary Font) -->
+    <link rel="preload" as="image" href="https://www.dropbox.com/scl/fi/2n6fkrxgj2t46hfxaq8ta/cs-horizontal-white.png?rlkey=z1gpl3r3hzwzkcnkgicvln8g3&st=vicgxtfv&raw=1" fetchpriority="high">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
     <style>
       body {
         font-family: 'Inter', sans-serif;
         scroll-behavior: smooth;
         background-color: #121a2a;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
       .bg-primary { background-color: #202c44; }
       .text-primary { color: #202c44; }
       .border-primary { border-color: #202c44; }
       
-      /* Professional Reveal Animations */
+      /* Optimize animations with composite layers */
       .reveal {
         opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        transform: translateY(20px);
+        transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         will-change: opacity, transform;
       }
       
@@ -36,61 +49,48 @@
       .reveal-delay-2 { transition-delay: 0.2s; }
       .reveal-delay-3 { transition-delay: 0.3s; }
       
-      /* Smooth fade for elements */
       .fade-in {
-        animation: fadeIn 1s ease-out forwards;
+        animation: fadeIn 0.8s ease-out forwards;
       }
       @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
+        from { opacity: 0; transform: translateY(10px); }
         to { opacity: 1; transform: translateY(0); }
       }
 
-      /* Floating Animation for background decals */
       @keyframes float {
         0% { transform: translateY(0px); }
-        50% { transform: translateY(-15px); }
+        50% { transform: translateY(-10px); }
         100% { transform: translateY(0px); }
       }
       .animate-float-decal {
-        animation: float 10s ease-in-out infinite;
+        animation: float 8s ease-in-out infinite;
+        will-change: transform;
       }
 
-      /* Custom scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #121a2a;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #202c44;
-        border-radius: 10px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #2b3a5a;
-      }
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #121a2a; }
+      ::-webkit-scrollbar-thumb { background: #202c44; border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: #2b3a5a; }
     </style>
     <script>
-      // Global Observer for Reveal Animations
       document.addEventListener('DOMContentLoaded', () => {
         const observerOptions = {
-          threshold: 0.1,
-          rootMargin: "0px 0px -50px 0px"
+          threshold: 0.05,
+          rootMargin: "0px 0px -20px 0px"
         };
 
         const observer = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
               entry.target.classList.add('active');
+              observer.unobserve(entry.target);
             }
           });
         }, observerOptions);
 
-        // Function to re-observe (needed for dynamic content like tabs)
         window.initReveal = () => {
           document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
         };
-        
         window.initReveal();
       });
     </script>
@@ -109,7 +109,6 @@
 </head>
   <body>
     <div id="root"></div>
-    <!-- Ponto de entrada crucial para o build do Vite -->
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>
