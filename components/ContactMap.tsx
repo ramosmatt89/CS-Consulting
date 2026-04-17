@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, Instagram, Linkedin, Facebook, User, MessageSquare
 
 const ContactMap: React.FC = () => {
   return (
-    <section id="contacto-detalhes" className="py-20 md:py-32 lg:pt-72 lg:pb-48 bg-white relative z-20 overflow-hidden">
+    <section id="contacto-detalhes" className="py-20 md:py-32 lg:pt-36 lg:pb-48 bg-white relative z-20 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-16">
         <div className="flex flex-col lg:flex-row gap-16 xl:gap-24">
           
@@ -109,28 +109,8 @@ const ContactMap: React.FC = () => {
                   <Phone size={20} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-400 text-[10px] uppercase tracking-widest mb-0.5">Tiago</h4>
-                  <p className="text-[#121a2a] font-bold text-base">928 162 413</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-5 p-4 rounded-3xl hover:bg-gray-50 transition-all border border-transparent hover:border-gray-100 group">
-                <div className="w-12 h-12 bg-[#202c44] text-white rounded-2xl flex items-center justify-center transition-transform group-hover:scale-110 shadow-lg shadow-blue-900/10 flex-shrink-0">
-                  <Phone size={20} />
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-400 text-[10px] uppercase tracking-widest mb-0.5">Ruben</h4>
-                  <p className="text-[#121a2a] font-bold text-base">928 166 443</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-5 p-4 rounded-3xl hover:bg-gray-50 transition-all border border-transparent hover:border-gray-100 group">
-                <div className="w-12 h-12 bg-[#202c44] text-white rounded-2xl flex items-center justify-center transition-transform group-hover:scale-110 shadow-lg shadow-blue-900/10 flex-shrink-0">
-                  <Phone size={20} />
-                </div>
-                <div>
                   <h4 className="font-bold text-gray-400 text-[10px] uppercase tracking-widest mb-0.5">Escritório</h4>
-                  <p className="text-[#121a2a] font-bold text-base">211 950 520</p>
+                  <p className="text-[#121a2a] font-bold text-base">211 566 520</p>
                 </div>
               </div>
               

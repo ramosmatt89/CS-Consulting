@@ -49,9 +49,7 @@ const Footer: React.FC = () => {
               <li className="flex items-start gap-3 text-gray-600 text-sm">
                 <Phone className="w-4 h-4 text-[#202c44] mt-0.5 flex-shrink-0" />
                 <div className="flex flex-col">
-                  <span>Tiago: 928 162 413</span>
-                  <span>Ruben: 928 166 443</span>
-                  <span>Escritório: 211 950 520</span>
+                  <span>Tel: 211 566 520</span>
                 </div>
               </li>
               <li className="flex items-start gap-3 text-gray-600 text-sm">
