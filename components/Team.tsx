@@ -3,7 +3,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { Mail, Linkedin, ArrowRight, ArrowLeft } from 'lucide-react';
 
 const teamMembers = [
-  { id: 1, name: "Carlos Silva", role: "CEO & Founder", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format,compress&q=75&w=600&fit=crop", email: "carlos.silva@cs-consulting.pt" },
+  { id: 1, name: "Rúben Cruz", role: "CO-CEO", image: "https://i.ibb.co/Y4jCXTrm/20260320-123715.jpg", email: "ruben.cruz@cs-consulting.pt" },
   { id: 2, name: "Mariana Santos", role: "Diretora Financeira", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format,compress&q=75&w=600&fit=crop", email: "mariana.santos@cs-consulting.pt" },
   { id: 3, name: "João Ferreira", role: "Consultor Fiscal Senior", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format,compress&q=75&w=600&fit=crop", email: "joao.ferreira@cs-consulting.pt" },
   { id: 4, name: "Ana Oliveira", role: "Gestora de RH", image: "https://images.unsplash.com/photo-1573496359-136d475583dc?auto=format,compress&q=75&w=600&fit=crop", email: "ana.oliveira@cs-consulting.pt" },
