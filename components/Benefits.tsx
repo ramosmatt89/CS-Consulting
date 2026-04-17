@@ -42,26 +42,28 @@ const Benefits: React.FC = () => {
 
           <div className="lg:w-1/2 w-full reveal reveal-delay-3 px-4 lg:px-0">
             <div className="grid grid-cols-2 gap-4 md:gap-8 items-start">
-              {/* Imagem 3D 1 - Análise e Gráficos */}
+              {/* Imagem 1 - Ferramentas de Contabilidade */}
               <div className="relative group overflow-hidden rounded-[2.5rem] shadow-2xl aspect-[4/5] bg-gray-100 transition-all duration-700 hover:shadow-blue-500/20 -translate-y-8">
                 <img 
-                  src="https://images.unsplash.com/photo-1611974717482-48a4788874d6?auto=format,compress&q=75&w=800&fit=crop" 
-                  alt="Financial Analysis 3D" 
+                  src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop" 
+                  alt="Gestão Financeira e Contabilidade" 
                   className="w-full h-full object-cover transform transition-transform duration-[2000ms] group-hover:scale-110"
                   loading="lazy"
                   decoding="async"
+                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#121a2a]/60 to-transparent opacity-60 group-hover:opacity-20 transition-opacity"></div>
               </div>
               
-              {/* Imagem 3D 2 - Crescimento e Dados */}
+              {/* Imagem 2 - Análise de Dados e Estratégia */}
               <div className="relative group overflow-hidden rounded-[2.5rem] shadow-2xl aspect-[4/5] bg-gray-100 transition-all duration-700 hover:shadow-blue-500/20 translate-y-8">
                 <img 
-                  src="https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?auto=format,compress&q=75&w=800&fit=crop" 
-                  alt="Business Strategy 3D Coins" 
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" 
+                  alt="Estratégia de Negócio e Dados" 
                   className="w-full h-full object-cover transform transition-transform duration-[2000ms] group-hover:scale-110"
                   loading="lazy"
                   decoding="async"
+                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#121a2a]/60 to-transparent opacity-60 group-hover:opacity-20 transition-opacity"></div>
               </div>
