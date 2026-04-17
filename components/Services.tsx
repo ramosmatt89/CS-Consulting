@@ -18,7 +18,7 @@ const serviceCategories = [
       { title: 'Contabilidade Geral e Analítica', desc: 'Gestão completa das contas da sua empresa, adaptada às necessidades do seu negócio.', icon: <BookOpen size={24} /> },
       { title: 'Relatórios Financeiros', desc: 'Balanços e demonstrações de resultados para apoio à gestão estratégica.', icon: <FileText size={24} /> },
       { title: 'Obrigações Legais', desc: 'Cumprimento rigoroso das normas fiscais e contabilísticas em vigor.', icon: <Shield size={24} /> },
-      { title: 'Consultoria Dedicada', desc: 'Apoio contínuo para a tomada de decisões financeiras mais eficientes.', icon: <UserCog size={24} /> },
+      { title: 'Escritório Virtual', desc: 'Sede social e gestão de correspondência para a sua empresa com flexibilidade total.', icon: <Compass size={24} /> },
     ]
   },
   {
@@ -70,14 +70,17 @@ const Services: React.FC = () => {
   }, [activeTab]);
 
   return (
-    <section id="servicos" className="py-24 md:py-32 bg-gray-50 overflow-hidden">
+    <section id="servicos" className="py-24 md:py-32 bg-white overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         
         {/* Header Section */}
         <div className="max-w-4xl mb-12 md:mb-16 reveal">
-          <span className="text-blue-600 font-bold uppercase tracking-[0.3em] text-[10px] mb-3 block">Nossas Soluções Especializadas</span>
+          <div className="inline-flex items-center gap-3 mb-3">
+            <span className="w-8 h-px bg-blue-600"></span>
+            <span className="text-blue-600 font-bold uppercase tracking-[0.3em] text-[10px]">As nossas soluções</span>
+          </div>
           <h2 className="text-4xl md:text-6xl font-black text-[#121a2a] mb-6 tracking-tighter uppercase leading-[0.9]">
-            Serviços <br /> Profissionais
+            Serviços <br /> Especializados
           </h2>
           <p className="text-gray-500 text-lg md:text-xl font-light max-w-2xl leading-relaxed">
             Explora as nossas áreas de atuação e descobre como podemos impulsionar o teu sucesso financeiro e operacional.

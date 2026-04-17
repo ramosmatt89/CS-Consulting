@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
               <img 
                 src={logoUrl} 
                 alt="CS Consulting" 
-                className="h-24 md:h-20 w-auto object-contain brightness-0 opacity-80" 
+                className="h-28 md:h-24 w-auto object-contain brightness-0 opacity-80" 
                 loading="lazy"
                 decoding="async"
               />
@@ -48,7 +48,11 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-gray-600 text-sm">
                 <Phone className="w-4 h-4 text-[#202c44] mt-0.5 flex-shrink-0" />
-                <span>+351 928 166 443</span>
+                <div className="flex flex-col">
+                  <span>Tiago: 928 162 413</span>
+                  <span>Ruben: 928 166 443</span>
+                  <span>Escritório: 211 950 520</span>
+                </div>
               </li>
               <li className="flex items-start gap-3 text-gray-600 text-sm">
                 <Mail className="w-4 h-4 text-[#202c44] mt-0.5 flex-shrink-0" />

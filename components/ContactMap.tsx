@@ -15,7 +15,6 @@ const ContactMap: React.FC = () => {
           <div className="lg:w-7/12 xl:w-8/12 order-1 lg:order-2">
             <div className="bg-slate-50 rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 xl:p-16 shadow-[0_30px_70px_-10px_rgba(0,0,0,0.1)] border border-slate-200/60 relative z-10">
               <div className="mb-10 text-center lg:text-left">
-                <span className="text-blue-600 font-black text-[10px] uppercase tracking-[0.4em] mb-4 block">Contacto Prioritário</span>
                 <h3 className="text-3xl md:text-4xl font-black text-[#121a2a] uppercase tracking-tighter mb-4">FALE <span className="text-blue-600">CONNOSCO</span></h3>
                 <p className="text-gray-400 text-sm font-medium max-w-lg mx-auto lg:mx-0">Deixe os seus dados e um consultor entrará em contacto para uma análise estratégica gratuita.</p>
               </div>
@@ -110,8 +109,28 @@ const ContactMap: React.FC = () => {
                   <Phone size={20} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-400 text-[10px] uppercase tracking-widest mb-0.5">Telemóvel</h4>
-                  <p className="text-[#121a2a] font-bold text-base">+351 928 166 443</p>
+                  <h4 className="font-bold text-gray-400 text-[10px] uppercase tracking-widest mb-0.5">Tiago</h4>
+                  <p className="text-[#121a2a] font-bold text-base">928 162 413</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-5 p-4 rounded-3xl hover:bg-gray-50 transition-all border border-transparent hover:border-gray-100 group">
+                <div className="w-12 h-12 bg-[#202c44] text-white rounded-2xl flex items-center justify-center transition-transform group-hover:scale-110 shadow-lg shadow-blue-900/10 flex-shrink-0">
+                  <Phone size={20} />
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-400 text-[10px] uppercase tracking-widest mb-0.5">Ruben</h4>
+                  <p className="text-[#121a2a] font-bold text-base">928 166 443</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-5 p-4 rounded-3xl hover:bg-gray-50 transition-all border border-transparent hover:border-gray-100 group">
+                <div className="w-12 h-12 bg-[#202c44] text-white rounded-2xl flex items-center justify-center transition-transform group-hover:scale-110 shadow-lg shadow-blue-900/10 flex-shrink-0">
+                  <Phone size={20} />
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-400 text-[10px] uppercase tracking-widest mb-0.5">Escritório</h4>
+                  <p className="text-[#121a2a] font-bold text-base">211 950 520</p>
                 </div>
               </div>
               

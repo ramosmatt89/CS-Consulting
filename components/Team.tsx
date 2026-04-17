@@ -53,13 +53,16 @@ const Team: React.FC = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8 reveal">
-          <div className="max-w-xl text-center md:text-left">
-            <span className="text-blue-400 font-bold uppercase tracking-[0.3em] text-xs mb-4 block">Talento & Experiência</span>
+          <div className="max-w-2xl text-center md:text-left">
+            <div className="inline-flex items-center gap-3 mb-4">
+              <span className="w-8 h-px bg-blue-500"></span>
+              <span className="text-blue-400 font-bold uppercase tracking-[0.3em] text-xs">Talento & Experiência</span>
+            </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 tracking-tighter uppercase">
               Equipa
             </h2>
             <p className="text-gray-400 text-lg font-light leading-relaxed">
-              Conheça os especialistas dedicados a transformar o potencial da sua empresa em resultados reais.
+              Mais do que experiência, procuramos as pessoas certas para entregar um serviço consistente, rigoroso e que acrescenta valor.
             </p>
           </div>
           

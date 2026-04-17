@@ -38,7 +38,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPath }) => {
       `}
     >
       <div className="container mx-auto px-6 lg:px-16 flex justify-between items-center">
-        <a href="#home" className="flex items-center group h-20 md:h-24 lg:h-32">
+        <a href="#home" className="flex items-center group h-24 md:h-28 lg:h-36">
           <img 
             src={logoUrl} 
             alt="CS Consulting & Accounting" 
@@ -54,7 +54,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPath }) => {
             <a
               key={link.name}
               href={link.href}
-              className={`text-[11px] font-bold uppercase tracking-[0.25em] transition-all hover:text-blue-400 ${
+              className={`text-[13px] font-bold uppercase tracking-[0.25em] transition-all hover:text-blue-400 ${
                 currentPath === link.href ? 'text-blue-400' : 'text-white/80'
               }`}
             >
@@ -84,7 +84,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPath }) => {
           <img 
             src={logoUrl} 
             alt="CS Consulting" 
-            className="h-28 w-auto mb-8"
+            className="h-32 w-auto mb-8"
             decoding="async"
           />
 
