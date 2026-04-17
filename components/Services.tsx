@@ -13,7 +13,6 @@ const serviceCategories = [
     id: 'contabilidade',
     label: 'Contabilidade',
     shortLabel: 'Contab.',
-    cardBg: 'bg-blue-50/50',
     description: 'Soluções personalizadas para fortalecer a sua eficiência financeira e garantir conformidade legal.',
     items: [
       { title: 'Contabilidade Geral e Analítica', desc: 'Gestão completa das contas da sua empresa, adaptada às necessidades do seu negócio.', icon: <BookOpen size={24} /> },
@@ -26,7 +25,6 @@ const serviceCategories = [
     id: 'rh',
     label: 'Recursos Humanos',
     shortLabel: 'RH',
-    cardBg: 'bg-indigo-50/40',
     description: 'Gestão eficaz do capital humano, garantindo conformidade legal e o melhor desempenho da sua equipa.',
     items: [
       { title: 'Processamento de Salários', desc: 'Gestão salarial, recibos de vencimento e envio de declarações fiscais.', icon: <Users size={24} /> },
@@ -39,7 +37,6 @@ const serviceCategories = [
     id: 'consultoria',
     label: 'Consultoria',
     shortLabel: 'Consul.',
-    cardBg: 'bg-slate-50/70',
     description: 'Acompanhamento estratégico para melhorar a eficiência operacional e o crescimento do seu negócio.',
     items: [
       { title: 'Planeamento Estratégico', desc: 'Desenvolvimento de planos de negócio focados no crescimento sustentável.', icon: <Compass size={24} /> },
@@ -52,7 +49,6 @@ const serviceCategories = [
     id: 'irs',
     label: 'IRS',
     shortLabel: 'IRS',
-    cardBg: 'bg-blue-50/20',
     description: 'Gestão especializada para minimizar a carga fiscal e otimizar a sua situação tributária individual.',
     items: [
       { title: 'Declaração de IRS', desc: 'Elaboração e submissão com foco na otimização de impostos a pagar.', icon: <Calculator size={24} /> },
@@ -110,26 +106,20 @@ const Services: React.FC = () => {
         </div>
 
         {/* Desktop Navigation Tabs */}
-        <div className="hidden lg:block mb-12 reveal reveal-delay-1">
-          <div className="flex border-b border-gray-200">
-            {serviceCategories.map((cat, idx) => (
-              <button
-                key={cat.id}
-                onClick={() => setActiveTab(idx)}
-                className={`px-10 py-8 text-xs font-black uppercase tracking-[0.2em] transition-all relative group ${
-                  activeTab === idx 
-                  ? 'text-[#202c44] bg-white border-x border-t border-gray-200 rounded-t-3xl shadow-[0_-10px_20px_rgba(0,0,0,0.02)] scale-[1.02] z-10' 
-                  : 'text-gray-400 hover:text-[#202c44] hover:bg-gray-100/50'
-                }`}
-              >
-                {cat.label}
-                <div className={`absolute -bottom-[2px] left-0 w-full h-[3px] bg-blue-600 transition-transform duration-500 origin-left ${activeTab === idx ? 'scale-x-100' : 'scale-x-0'}`}></div>
-                {activeTab === idx && (
-                  <div className="absolute -bottom-[2px] left-0 w-full h-[4px] bg-white z-10"></div>
-                )}
-              </button>
-            ))}
-          </div>
+        <div className="hidden lg:flex flex-wrap gap-4 mb-12 reveal reveal-delay-1">
+          {serviceCategories.map((cat, idx) => (
+            <button
+              key={cat.id}
+              onClick={() => setActiveTab(idx)}
+              className={`px-10 py-5 rounded-2xl md:rounded-3xl font-black text-xs uppercase tracking-[0.2em] transition-all duration-500 border shadow-sm ${
+                activeTab === idx 
+                ? 'bg-[#202c44] text-white border-[#202c44] shadow-xl scale-[1.05] z-10' 
+                : 'bg-white text-gray-500 border-gray-100 hover:border-blue-200 hover:bg-gray-50'
+              }`}
+            >
+              {cat.label}
+            </button>
+          ))}
         </div>
 
         {/* Tab Content Area */}
@@ -150,26 +140,26 @@ const Services: React.FC = () => {
             {serviceCategories[activeTab].items.map((item, idx) => (
               <div 
                 key={idx}
-                className={`${serviceCategories[activeTab].cardBg} p-8 md:p-10 rounded-3xl md:rounded-[3rem] shadow-sm border border-gray-100 hover:shadow-[0_40px_100px_rgba(0,0,0,0.08)] hover:border-blue-200 transition-all duration-700 group flex flex-col h-full reveal reveal-delay-${(idx % 2) + 1}`}
+                className={`bg-[#202c44] p-8 md:p-10 rounded-3xl md:rounded-[3rem] shadow-xl border border-white/5 hover:shadow-[0_40px_100px_rgba(32,44,68,0.2)] hover:border-blue-500/30 transition-all duration-700 group flex flex-col h-full reveal reveal-delay-${(idx % 2) + 1}`}
               >
-                <div className="w-14 h-14 md:w-16 md:h-16 bg-gray-50 text-[#202c44] rounded-2xl md:rounded-3xl flex items-center justify-center mb-8 group-hover:bg-[#202c44] group-hover:text-white transition-all duration-500 transform group-hover:rotate-[15deg] group-hover:scale-110 shadow-sm">
+                <div className="w-14 h-14 md:w-16 md:h-16 bg-white/5 text-blue-400 rounded-2xl md:rounded-3xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 transform group-hover:rotate-[15deg] group-hover:scale-110 shadow-sm">
                   {item.icon}
                 </div>
-                <h4 className="text-xl md:text-2xl font-bold text-[#121a2a] mb-4 group-hover:text-blue-600 transition-colors">
+                <h4 className="text-xl md:text-2xl font-bold text-white mb-4 transition-colors">
                   {item.title}
                 </h4>
-                <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-8 flex-grow">
+                <p className="text-white/60 text-sm md:text-base leading-relaxed mb-8 flex-grow font-light">
                   {item.desc}
                 </p>
                 
                 <a 
                   href="#contacto-detalhes"
-                  className="pt-6 border-t border-gray-50 flex items-center justify-between group/link"
+                  className="pt-6 border-t border-white/5 flex items-center justify-between group/link"
                 >
-                  <span className="text-[10px] md:text-xs font-black uppercase tracking-widest text-[#202c44]/40 group-hover/link:text-blue-600 transition-colors">
+                  <span className="text-[10px] md:text-xs font-black uppercase tracking-widest text-white/40 group-hover/link:text-blue-400 transition-colors">
                     Solicitar Proposta
                   </span>
-                  <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center group-hover/link:bg-blue-600 group-hover/link:text-white transition-all duration-500 transform group-hover/link:translate-x-1">
+                  <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/40 group-hover/link:bg-blue-600 group-hover/link:text-white transition-all duration-500 transform group-hover/link:translate-x-1">
                     <ChevronRight size={18} />
                   </div>
                 </a>
