@@ -124,7 +124,7 @@ const Services: React.FC = () => {
 
         {/* Tab Content Area */}
         <div key={activeTab} className="fade-in-content">
-          <div className="bg-white p-8 md:p-12 rounded-[2.5rem] md:rounded-[4rem] shadow-[0_20px_60px_rgba(0,0,0,0.03)] border border-gray-100 mb-8 md:mb-12 reveal">
+          <div className="bg-white p-8 md:p-12 md:py-16 rounded-[3rem] md:rounded-[4.5rem] shadow-[0_50px_100px_-20px_rgba(37,99,235,0.18)] border border-blue-600/20 mb-8 md:mb-12 reveal">
             <div className="max-w-4xl">
               <h3 className="text-2xl md:text-3xl font-black text-[#202c44] mb-6 uppercase tracking-tighter">
                 {serviceCategories[activeTab].label}

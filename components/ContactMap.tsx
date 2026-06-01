@@ -43,7 +43,7 @@ const ContactMap: React.FC = () => {
               Desktop (lg+): Aparece depois (lg:order-2)
           */}
           <div className="lg:w-7/12 xl:w-8/12 order-1 lg:order-2">
-            <div className="bg-slate-50 rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 xl:p-16 shadow-[0_30px_70px_-10px_rgba(0,0,0,0.1)] border border-slate-200/60 relative z-10">
+            <div className="bg-white rounded-[3rem] md:rounded-[4.5rem] p-8 md:p-12 xl:p-16 shadow-[0_50px_100px_-20px_rgba(37,99,235,0.18)] border border-blue-600/20 relative z-10">
               <div className="mb-10 text-center lg:text-left">
                 <h3 className="text-3xl md:text-4xl font-black text-[#121a2a] uppercase tracking-tighter mb-4">FALE <span className="text-blue-600">CONNOSCO</span></h3>
                 <p className="text-gray-400 text-sm font-medium max-w-lg mx-auto lg:mx-0">Deixe os seus dados e um consultor entrará em contacto para uma análise estratégica gratuita.</p>
