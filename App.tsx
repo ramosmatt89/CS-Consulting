@@ -6,6 +6,7 @@ import Services from './components/Services';
 import Benefits from './components/Benefits';
 import About from './components/About';
 import Team from './components/Team';
+import LinkedInFeed from './components/LinkedInFeed';
 import Testimonials from './components/Testimonials';
 import CTASection from './components/CTASection';
 import ContactMap from './components/ContactMap';
@@ -31,6 +32,7 @@ const App: React.FC = () => {
         <Services />
         <About />
         <Team />
+        <LinkedInFeed />
         <Benefits />
         <Testimonials />
         <CTASection />
