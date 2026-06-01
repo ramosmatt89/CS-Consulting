@@ -1,8 +1,38 @@
 
-import React from 'react';
-import { Phone, Mail, MapPin, Instagram, Linkedin, Facebook, User, MessageSquare, Send } from 'lucide-react';
+import React, { useState } from 'react';
+import { Phone, Mail, MapPin, Instagram, Linkedin, Facebook, User, MessageSquare, Send, CheckCircle2, AlertCircle } from 'lucide-react';
 
 const ContactMap: React.FC = () => {
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus('loading');
+
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch('https://hook.eu2.make.com/i6tqoejykggfmr69mvwtzrvkom8b4oxq', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        (e.target as HTMLFormElement).reset();
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      setStatus('error');
+    }
+  };
+
   return (
     <section id="contacto-detalhes" className="py-20 md:py-32 lg:pt-36 lg:pb-48 bg-white relative z-20 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-16">
@@ -19,13 +49,14 @@ const ContactMap: React.FC = () => {
                 <p className="text-gray-400 text-sm font-medium max-w-lg mx-auto lg:mx-0">Deixe os seus dados e um consultor entrará em contacto para uma análise estratégica gratuita.</p>
               </div>
               
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="group relative">
                   <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-1 group-focus-within:text-blue-600 transition-colors">Nome ou Empresa</label>
                   <div className="relative">
                     <User size={18} className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-300 group-focus-within:text-blue-600 transition-colors" />
                     <input 
                       type="text" 
+                      name="name"
                       placeholder="Como devemos tratar?"
                       className="w-full pl-14 pr-6 py-4 bg-white border border-gray-100 rounded-2xl focus:border-blue-600 outline-none transition-all text-sm font-semibold text-[#121a2a] shadow-sm"
                       required
@@ -40,6 +71,7 @@ const ContactMap: React.FC = () => {
                       <Mail size={18} className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-300 group-focus-within:text-blue-600 transition-colors" />
                       <input 
                         type="email" 
+                        name="email"
                         placeholder="email@exemplo.pt"
                         className="w-full pl-14 pr-6 py-4 bg-white border border-gray-100 rounded-2xl focus:border-blue-600 outline-none transition-all text-sm font-semibold text-[#121a2a] shadow-sm"
                         required
@@ -53,6 +85,7 @@ const ContactMap: React.FC = () => {
                       <Phone size={18} className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-300 group-focus-within:text-blue-600 transition-colors" />
                       <input 
                         type="tel" 
+                        name="phone"
                         placeholder="+351 9XX XXX XXX"
                         className="w-full pl-14 pr-6 py-4 bg-white border border-gray-100 rounded-2xl focus:border-blue-600 outline-none transition-all text-sm font-semibold text-[#121a2a] shadow-sm"
                         required
@@ -67,18 +100,35 @@ const ContactMap: React.FC = () => {
                     <MessageSquare size={18} className="absolute left-5 top-5 text-gray-300 group-focus-within:text-blue-600 transition-colors" />
                     <textarea 
                       rows={4}
+                      name="message"
                       placeholder="Como podemos ajudar o seu negócio?"
                       className="w-full pl-14 pr-6 py-4 bg-white border border-gray-100 rounded-2xl focus:border-blue-600 outline-none transition-all resize-none text-sm font-semibold text-[#121a2a] shadow-sm"
+                      required
                     ></textarea>
                   </div>
                 </div>
+
+                {status === 'success' && (
+                  <div className="flex items-center gap-3 p-4 bg-green-50 text-green-700 rounded-2xl animate-fade-in">
+                    <CheckCircle2 size={20} />
+                    <span className="text-sm font-bold">Mensagem enviada com sucesso! Entraremos em contacto brevemente.</span>
+                  </div>
+                )}
+
+                {status === 'error' && (
+                  <div className="flex items-center gap-3 p-4 bg-red-50 text-red-700 rounded-2xl animate-fade-in">
+                    <AlertCircle size={20} />
+                    <span className="text-sm font-bold">Ocorreu um erro ao enviar. Por favor, tente novamente ou use outro canal de contacto.</span>
+                  </div>
+                )}
                 
                 <button 
                   type="submit" 
-                  className="group/btn w-full bg-[#121a2a] text-white py-5 rounded-2xl font-black text-xs uppercase tracking-[0.3em] hover:bg-blue-600 transition-all active:scale-[0.98] flex items-center justify-center gap-3 shadow-xl shadow-blue-900/10"
+                  disabled={status === 'loading'}
+                  className="group/btn w-full bg-[#121a2a] text-white py-5 rounded-2xl font-black text-xs uppercase tracking-[0.3em] hover:bg-blue-600 transition-all active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 shadow-xl shadow-blue-900/10"
                 >
-                  ENVIAR MENSAGEM
-                  <Send size={16} className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
+                  {status === 'loading' ? 'A ENVIAR...' : 'ENVIAR MENSAGEM'}
+                  <Send size={16} className={`${status === 'loading' ? 'animate-pulse' : 'group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1'} transition-transform`} />
                 </button>
               </form>
 
