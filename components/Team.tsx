@@ -4,9 +4,9 @@ import { Mail, Linkedin, ArrowRight, ArrowLeft } from 'lucide-react';
 
 const teamMembers = [
   { id: 1, name: "Rúben Cruz", role: "CO-CEO", image: "https://i.ibb.co/Y4jCXTrm/20260320-123715.jpg", email: "ruben.cruz@cs-consulting.pt" },
-  { id: 2, name: "Mariana Santos", role: "Diretora Financeira", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format,compress&q=75&w=600&fit=crop", email: "mariana.santos@cs-consulting.pt" },
-  { id: 3, name: "João Ferreira", role: "Consultor Fiscal Senior", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format,compress&q=75&w=600&fit=crop", email: "joao.ferreira@cs-consulting.pt" },
-  { id: 4, name: "Ana Oliveira", role: "Gestora de RH", image: "https://images.unsplash.com/photo-1573496359-136d475583dc?auto=format,compress&q=75&w=600&fit=crop", email: "ana.oliveira@cs-consulting.pt" },
+  { id: 2, name: "Tiago Domingues", role: "CEO", image: "https://i.ibb.co/3mRgFQQw/Tiago-melhorada.png", email: "tiago.domingues@cs-consulting.pt" },
+  { id: 3, name: "Rosa Ferreira", role: "Consultora Fiscal Senior", image: "https://i.ibb.co/BRvN8KF/Rosa-melhorada.png", email: "rosa.ferreira@cs-consulting.pt" },
+  { id: 4, name: "Rodrigo Freire", role: "Gestor de RH", image: "https://i.ibb.co/WNX3yjhs/Rodrigo-melhorada.png", email: "rodrigo.freire@cs-consulting.pt" },
   { id: 5, name: "Pedro Martins", role: "Contabilista Certificado", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format,compress&q=75&w=600&fit=crop", email: "pedro.martins@cs-consulting.pt" },
   { id: 6, name: "Sofia Costa", role: "Auditoria Financeira", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format,compress&q=75&w=600&fit=crop", email: "sofia.costa@cs-consulting.pt" },
   { id: 7, name: "Miguel Rodrigues", role: "Consultoria Estratégica", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format,compress&q=75&w=600&fit=crop", email: "miguel.rodrigues@cs-consulting.pt" },
