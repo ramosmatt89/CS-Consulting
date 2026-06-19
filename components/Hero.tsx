@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-5 md:gap-6">
             <a 
               href="#contacto-detalhes" 
-              className="px-8 md:px-10 py-4 bg-[#202c44] text-white rounded-full font-bold text-base md:text-lg hover:bg-[#2b3a5a] transition-all transform hover:scale-105 shadow-xl inline-flex items-center justify-center"
+              className="px-8 md:px-10 py-4 bg-[#202c44] text-white rounded-xl font-bold text-base md:text-lg hover:bg-[#2b3a5a] transition-all transform hover:scale-105 shadow-xl inline-flex items-center justify-center"
             >
               Fale Connosco
             </a>

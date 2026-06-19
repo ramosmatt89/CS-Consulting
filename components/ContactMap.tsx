@@ -34,7 +34,7 @@ const ContactMap: React.FC = () => {
   };
 
   return (
-    <section id="contacto-detalhes" className="py-20 md:py-32 lg:pt-36 lg:pb-48 bg-white relative z-20 overflow-hidden">
+    <section id="contacto-detalhes" className="py-16 md:py-24 lg:pt-28 lg:pb-36 bg-white relative z-20 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-16">
         <div className="flex flex-col lg:flex-row gap-16 xl:gap-24">
           
@@ -43,7 +43,7 @@ const ContactMap: React.FC = () => {
               Desktop (lg+): Aparece depois (lg:order-2)
           */}
           <div className="lg:w-7/12 xl:w-8/12 order-1 lg:order-2">
-            <div className="bg-white rounded-[3rem] md:rounded-[4.5rem] p-8 md:p-12 xl:p-16 shadow-[0_50px_100px_-20px_rgba(37,99,235,0.18)] border border-blue-600/20 relative z-10">
+            <div className="bg-white rounded-2xl p-8 md:p-12 xl:p-16 shadow-[0_50px_100px_-20px_rgba(37,99,235,0.18)] border border-blue-600/20 relative z-10">
               <div className="mb-10 text-center lg:text-left">
                 <h3 className="text-3xl md:text-4xl font-black text-[#121a2a] uppercase tracking-tighter mb-4">FALE <span className="text-blue-600">CONNOSCO</span></h3>
                 <p className="text-gray-400 text-sm font-medium max-w-lg mx-auto lg:mx-0">Deixe os seus dados e um consultor entrará em contacto para uma análise estratégica gratuita.</p>
@@ -189,7 +189,7 @@ const ContactMap: React.FC = () => {
             </div>
 
             {/* Map Frame */}
-            <div className="w-full h-[300px] md:h-[350px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-gray-50 relative">
+            <div className="w-full h-[300px] md:h-[350px] rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-50 relative">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.882195861491!2d-9.237243924036136!3d38.71120247125345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ec96317b96637%3A0xc331f0f089692994!2sAl.%20Ant%C3%B3nio%20S%C3%A9rgio%207%2C%202795-023%20Linda-a-Velha!5e0!3m2!1spt-PT!2spt!4v1709123456789!5m2!1spt-PT!2spt" 
                 width="100%" 

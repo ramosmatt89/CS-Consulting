@@ -5,7 +5,7 @@ const CTASection: React.FC = () => {
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-6">
-        <div className="bg-[#202c44] rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
+        <div className="bg-[#202c44] rounded-2xl p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
           {/* Abstract pattern background */}
           <div className="absolute inset-0 opacity-10 pointer-events-none">
             <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -28,7 +28,7 @@ const CTASection: React.FC = () => {
           <div className="relative z-10">
             <a 
               href="#contacto"
-              className="inline-block bg-white text-[#202c44] px-10 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all"
+              className="inline-block bg-white text-[#202c44] px-10 py-5 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all"
             >
               Agendar consulta
             </a>

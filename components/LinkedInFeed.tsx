@@ -13,7 +13,7 @@ const LinkedInFeed: React.FC = () => {
   }, []);
 
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white py-12 md:py-20">
       <div className="container mx-auto px-6">
         <div className="mb-12 text-center reveal">
           <div className="inline-flex items-center gap-3 mb-4">
@@ -27,7 +27,7 @@ const LinkedInFeed: React.FC = () => {
         </div>
         
         <div className="reveal reveal-delay-1 max-w-6xl mx-auto">
-          <div className="bg-white rounded-[3rem] md:rounded-[4.5rem] p-1 shadow-[0_50px_100px_-20px_rgba(37,99,235,0.18)] border border-blue-600/20 overflow-hidden">
+          <div className="bg-white rounded-2xl p-1 shadow-[0_50px_100px_-20px_rgba(37,99,235,0.18)] border border-blue-600/20 overflow-hidden">
             <div 
               className="elfsight-app-07faa308-3ae6-43cc-8fbd-64d467d06867" 
               data-elfsight-app-lazy

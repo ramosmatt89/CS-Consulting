@@ -12,7 +12,7 @@ const benefits = [
 
 const Benefits: React.FC = () => {
   return (
-    <section className="py-20 md:py-32 bg-white relative z-20 overflow-hidden">
+    <section className="py-16 md:py-24 bg-white relative z-20 overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           
@@ -43,7 +43,7 @@ const Benefits: React.FC = () => {
           <div className="lg:w-1/2 w-full reveal reveal-delay-3 px-4 lg:px-0">
             <div className="grid grid-cols-2 gap-4 md:gap-8 items-start">
               {/* Imagem 1 - Ferramentas de Contabilidade */}
-              <div className="relative group overflow-hidden rounded-[2.5rem] shadow-2xl aspect-[4/5] bg-gray-100 transition-all duration-700 hover:shadow-blue-500/20 -translate-y-8">
+              <div className="relative group overflow-hidden rounded-2xl shadow-2xl aspect-[4/5] bg-gray-100 transition-all duration-700 hover:shadow-blue-500/20 -translate-y-8">
                 <img 
                   src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop" 
                   alt="Gestão Financeira e Contabilidade" 
@@ -56,7 +56,7 @@ const Benefits: React.FC = () => {
               </div>
               
               {/* Imagem 2 - Análise de Dados e Estratégia */}
-              <div className="relative group overflow-hidden rounded-[2.5rem] shadow-2xl aspect-[4/5] bg-gray-100 transition-all duration-700 hover:shadow-blue-500/20 translate-y-8">
+              <div className="relative group overflow-hidden rounded-2xl shadow-2xl aspect-[4/5] bg-gray-100 transition-all duration-700 hover:shadow-blue-500/20 translate-y-8">
                 <img 
                   src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" 
                   alt="Estratégia de Negócio e Dados" 

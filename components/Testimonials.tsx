@@ -49,7 +49,7 @@ const Testimonials: React.FC = () => {
   };
 
   return (
-    <section id="depoimentos" className="py-24 bg-white overflow-hidden">
+    <section id="depoimentos" className="py-16 md:py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 reveal">
           <h2 className="text-3xl md:text-4xl font-bold text-[#202c44] mb-4">O que dizem os nossos clientes</h2>
@@ -62,7 +62,7 @@ const Testimonials: React.FC = () => {
             <Quote size={120} />
           </div>
 
-          <div className={`flex flex-col md:flex-row items-center gap-10 bg-gray-50 p-10 md:p-16 rounded-[3rem] border border-gray-100 shadow-[0_30px_60px_rgba(0,0,0,0.02)] relative z-10 transition-all duration-500 ${animating ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
+          <div className={`flex flex-col md:flex-row items-center gap-10 bg-gray-50 p-10 md:p-16 rounded-2xl border border-gray-100 shadow-[0_30px_60px_rgba(0,0,0,0.02)] relative z-10 transition-all duration-500 ${animating ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
             <div className="flex-1">
               <div className="flex text-yellow-400 mb-6">
                 {[...Array(testimonials[active].rating)].map((_, i) => (
@@ -84,13 +84,13 @@ const Testimonials: React.FC = () => {
             <div className="hidden md:flex flex-col gap-4">
               <button 
                 onClick={prev}
-                className="p-4 rounded-full bg-white shadow-md hover:bg-[#202c44] hover:text-white transition-all border border-gray-100 active:scale-90"
+                className="p-4 rounded-xl bg-white shadow-md hover:bg-[#202c44] hover:text-white transition-all border border-gray-100 active:scale-90"
               >
                 <ChevronLeft />
               </button>
               <button 
                 onClick={next}
-                className="p-4 rounded-full bg-white shadow-md hover:bg-[#202c44] hover:text-white transition-all border border-gray-100 active:scale-90"
+                className="p-4 rounded-xl bg-white shadow-md hover:bg-[#202c44] hover:text-white transition-all border border-gray-100 active:scale-90"
               >
                 <ChevronRight />
               </button>
@@ -99,8 +99,8 @@ const Testimonials: React.FC = () => {
           
           {/* Mobile Buttons */}
           <div className="flex justify-center gap-6 mt-8 md:hidden reveal">
-              <button onClick={prev} className="p-4 rounded-full bg-[#202c44] text-white shadow-lg active:scale-90"><ChevronLeft /></button>
-              <button onClick={next} className="p-4 rounded-full bg-[#202c44] text-white shadow-lg active:scale-90"><ChevronRight /></button>
+              <button onClick={prev} className="p-4 rounded-xl bg-[#202c44] text-white shadow-lg active:scale-90"><ChevronLeft /></button>
+              <button onClick={next} className="p-4 rounded-xl bg-[#202c44] text-white shadow-lg active:scale-90"><ChevronRight /></button>
           </div>
 
           {/* Pagination Indicators */}

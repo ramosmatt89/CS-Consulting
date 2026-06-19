@@ -4,7 +4,7 @@ import { ShieldCheck, Target } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
-    <section id="sobre" className="py-24 lg:py-32 bg-white relative overflow-hidden">
+    <section id="sobre" className="py-16 md:py-24 bg-white relative overflow-hidden">
       <div className="absolute right-0 top-20 text-[#202c44]/5 select-none pointer-events-none hidden lg:block font-black text-8xl leading-tight text-right pr-12 animate-float-decal">
         ACCOUNTING<br />
         FINANCE<br />
@@ -16,7 +16,7 @@ const About: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           
           <div className="lg:w-1/2 relative group reveal">
-            <div className="relative z-10 rounded-[2rem] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.12)] border-4 border-white transition-all duration-700 group-hover:scale-[1.02] bg-gray-50 aspect-[4/3]">
+            <div className="relative z-10 rounded-2xl overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.12)] border-4 border-white transition-all duration-700 group-hover:scale-[1.02] bg-gray-50 aspect-[4/3]">
               <img 
                 src="https://www.dropbox.com/scl/fi/16y0oq3r33p4oxdk3mts9/Sobre-a-CS.jpeg?rlkey=0cg4uxmwwj5kzse9svfpuyyo3&st=6yrxrxmx&raw=1" 
                 alt="CS Consulting Office - Carnaxide" 
@@ -28,7 +28,7 @@ const About: React.FC = () => {
               />
               <div className="absolute inset-0 bg-[#202c44]/10 group-hover:bg-transparent transition-colors duration-500"></div>
             </div>
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-blue-50 rounded-3xl -z-10 group-hover:-translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
+            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-blue-50 rounded-2xl -z-10 group-hover:-translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
           </div>
 
           <div className="lg:w-1/2">

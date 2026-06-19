@@ -46,7 +46,7 @@ const Team: React.FC = () => {
   }, []);
 
   return (
-    <section id="equipa" className="bg-[#0c121e] py-24 lg:py-32 relative z-10 overflow-hidden">
+    <section id="equipa" className="bg-[#0c121e] py-16 md:py-24 relative z-10 overflow-hidden">
       {/* Background Ambience */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
@@ -103,7 +103,7 @@ const Team: React.FC = () => {
               key={member.id}
               className="flex-none w-full sm:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-5rem)/3)] snap-center sm:snap-start group"
             >
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-[#161f2e] mb-6 md:mb-8 shadow-2xl mx-auto max-w-[90vw] sm:max-w-none transition-all duration-700 group-hover:translate-y-[-10px] group-hover:shadow-blue-500/10">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-[#161f2e] mb-6 md:mb-8 shadow-2xl mx-auto max-w-[90vw] sm:max-w-none transition-all duration-700 group-hover:translate-y-[-10px] group-hover:shadow-blue-500/10">
                 {/* Photo with B&W effect only on Desktop (md+) */}
                 <div className="absolute inset-0 grayscale md:grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out">
                   <img 
@@ -137,7 +137,7 @@ const Team: React.FC = () => {
                 
                 <a 
                   href={`mailto:${member.email}`}
-                  className="inline-flex items-center gap-3 px-6 md:px-8 py-2.5 md:py-3 bg-white/5 border border-white/10 rounded-full text-white text-[10px] md:text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300 active:scale-95 group/btn hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+                  className="inline-flex items-center gap-3 px-6 md:px-8 py-2.5 md:py-3 bg-white/5 border border-white/10 rounded-xl text-white text-[10px] md:text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300 active:scale-95 group/btn hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]"
                 >
                   Contactar
                   <Mail size={14} className="group-hover/btn:translate-x-1 group-hover/btn:scale-110 transition-transform" />

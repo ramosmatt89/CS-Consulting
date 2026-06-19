@@ -70,7 +70,7 @@ const Services: React.FC = () => {
   }, [activeTab]);
 
   return (
-    <section id="servicos" className="py-24 md:py-32 bg-white overflow-hidden">
+    <section id="servicos" className="py-16 md:py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         
         {/* Header Section */}
@@ -94,7 +94,7 @@ const Services: React.FC = () => {
             <button
               key={cat.id}
               onClick={() => setActiveTab(idx)}
-              className={`py-5 px-3 rounded-2xl font-black text-[10px] uppercase tracking-widest transition-all duration-500 border ${
+              className={`py-5 px-3 rounded-xl font-black text-[10px] uppercase tracking-widest transition-all duration-500 border ${
                 activeTab === idx 
                 ? 'bg-[#202c44] text-white border-[#202c44] shadow-[0_20px_40px_-5px_rgba(32,44,68,0.3)] scale-[1.04] z-10' 
                 : 'bg-white text-gray-500 border-blue-600/10 shadow-[0_15px_35px_-10px_rgba(37,99,235,0.1)] hover:border-blue-600/20'
@@ -111,7 +111,7 @@ const Services: React.FC = () => {
             <button
               key={cat.id}
               onClick={() => setActiveTab(idx)}
-              className={`px-12 py-6 rounded-3xl font-black text-xs uppercase tracking-[0.2em] transition-all duration-500 border ${
+              className={`px-12 py-6 rounded-2xl font-black text-xs uppercase tracking-[0.2em] transition-all duration-500 border ${
                 activeTab === idx 
                 ? 'bg-[#202c44] text-white border-[#202c44] shadow-[0_30px_60px_-10px_rgba(32,44,68,0.35)] scale-[1.06] z-10' 
                 : 'bg-white text-gray-500 border-blue-600/10 shadow-[0_20px_45px_-15px_rgba(37,99,235,0.12)] hover:border-blue-600/30 hover:bg-gray-50 hover:-translate-y-1'
@@ -124,7 +124,7 @@ const Services: React.FC = () => {
 
         {/* Tab Content Area */}
         <div key={activeTab} className="fade-in-content">
-          <div className="bg-white p-8 md:p-12 md:py-16 rounded-[3rem] md:rounded-[4.5rem] shadow-[0_50px_100px_-20px_rgba(37,99,235,0.18)] border border-blue-600/20 mb-8 md:mb-12 reveal">
+          <div className="bg-white p-8 md:p-12 md:py-16 rounded-2xl shadow-[0_50px_100px_-20px_rgba(37,99,235,0.18)] border border-blue-600/20 mb-8 md:mb-12 reveal">
             <div className="max-w-4xl">
               <h3 className="text-2xl md:text-3xl font-black text-[#202c44] mb-6 uppercase tracking-tighter">
                 {serviceCategories[activeTab].label}
@@ -140,9 +140,9 @@ const Services: React.FC = () => {
             {serviceCategories[activeTab].items.map((item, idx) => (
               <div 
                 key={idx}
-                className={`bg-[#202c44] p-8 md:p-10 rounded-3xl md:rounded-[3rem] shadow-xl border border-white/5 hover:shadow-[0_40px_100px_rgba(32,44,68,0.2)] hover:border-blue-500/30 transition-all duration-700 group flex flex-col h-full reveal reveal-delay-${(idx % 2) + 1}`}
+                className={`bg-[#202c44] p-8 md:p-10 rounded-2xl shadow-xl border border-white/5 hover:shadow-[0_40px_100px_rgba(32,44,68,0.2)] hover:border-blue-500/30 transition-all duration-700 group flex flex-col h-full reveal reveal-delay-${(idx % 2) + 1}`}
               >
-                <div className="w-14 h-14 md:w-16 md:h-16 bg-white/5 text-blue-400 rounded-2xl md:rounded-3xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 transform group-hover:rotate-[15deg] group-hover:scale-110 shadow-sm">
+                <div className="w-14 h-14 md:w-16 md:h-16 bg-white/5 text-blue-400 rounded-xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 transform group-hover:rotate-[15deg] group-hover:scale-110 shadow-sm">
                   {item.icon}
                 </div>
                 <h4 className="text-xl md:text-2xl font-bold text-white mb-4 transition-colors">
@@ -159,7 +159,7 @@ const Services: React.FC = () => {
                   <span className="text-[10px] md:text-xs font-black uppercase tracking-widest text-white/40 group-hover/link:text-blue-400 transition-colors">
                     Solicitar Proposta
                   </span>
-                  <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/40 group-hover/link:bg-blue-600 group-hover/link:text-white transition-all duration-500 transform group-hover/link:translate-x-1">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-white/40 group-hover/link:bg-blue-600 group-hover/link:text-white transition-all duration-500 transform group-hover/link:translate-x-1">
                     <ChevronRight size={18} />
                   </div>
                 </a>

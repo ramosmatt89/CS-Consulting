@@ -17,7 +17,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="bg-slate-50 rounded-3xl shadow-[0_30px_70px_-10px_rgba(0,0,0,0.15)] p-8 md:p-10 border border-slate-200/60 transform transition-all duration-500 hover:scale-[1.01] relative z-10">
+    <div className="bg-slate-50 rounded-2xl shadow-[0_30px_70px_-10px_rgba(0,0,0,0.15)] p-8 md:p-10 border border-slate-200/60 transform transition-all duration-500 hover:scale-[1.01] relative z-10">
       <h3 className="text-2xl font-black text-[#202c44] mb-2 uppercase tracking-tighter">FALE CONNOSCO</h3>
       <p className="text-gray-500 mb-8 text-sm">Preencha o formulário e receba uma análise personalizada.</p>
       
