@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Phone, Mail, MapPin, Instagram, Linkedin, Facebook, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, Linkedin, Clock } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const logoUrl = "https://www.dropbox.com/scl/fi/2n6fkrxgj2t46hfxaq8ta/cs-horizontal-white.png?rlkey=z1gpl3r3hzwzkcnkgicvln8g3&st=vicgxtfv&raw=1";
@@ -25,7 +25,6 @@ const Footer: React.FC = () => {
               Especialistas em contabilidade para empresas e trabalhadores independentes em Portugal.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-white rounded-full text-[#202c44] shadow-sm flex items-center justify-center hover:bg-[#202c44] hover:text-white transition-all border border-gray-100"><Facebook size={18} /></a>
               <a href="#" className="w-10 h-10 bg-white rounded-full text-[#202c44] shadow-sm flex items-center justify-center hover:bg-[#202c44] hover:text-white transition-all border border-gray-100"><Instagram size={18} /></a>
               <a href="#" className="w-10 h-10 bg-white rounded-full text-[#202c44] shadow-sm flex items-center justify-center hover:bg-[#202c44] hover:text-white transition-all border border-gray-100"><Linkedin size={18} /></a>
             </div>

@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Instagram, Linkedin, Facebook, User, MessageSquare, Send, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, Linkedin, User, MessageSquare, Send, CheckCircle2, AlertCircle } from 'lucide-react';
 
 const ContactMap: React.FC = () => {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -133,7 +133,7 @@ const ContactMap: React.FC = () => {
               </form>
 
               <div className="mt-10 flex gap-4 justify-center md:justify-start pt-8 border-t border-slate-200/60">
-                {[Facebook, Instagram, Linkedin].map((Icon, i) => (
+                {[Instagram, Linkedin].map((Icon, i) => (
                   <a key={i} href="#" className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-[#121a2a] hover:bg-[#121a2a] hover:text-white transition-all border border-slate-100 shadow-sm">
                     <Icon size={18} />
                   </a>
