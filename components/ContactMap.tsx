@@ -180,7 +180,10 @@ const ContactMap: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-400 text-[10px] uppercase tracking-widest mb-0.5">Morada</h4>
-                  <p className="text-[#121a2a] font-bold text-sm md:text-base">Carnaxide, Portugal</p>
+                  <p className="text-[#121a2a] font-bold text-sm md:text-base leading-relaxed">
+                    <span className="block whitespace-nowrap">Alameda António Sérgio, n.º 7, 2G</span>
+                    <span className="block whitespace-nowrap">2795-023 Linda-a-Velha</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -188,7 +191,7 @@ const ContactMap: React.FC = () => {
             {/* Map Frame */}
             <div className="w-full h-[300px] md:h-[350px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-gray-50 relative">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.62343887258!2d-9.239327623456385!3d38.72149027176251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecc889988888b%3A0x8888888888888888!2sR.%20Am%C3%A9lia%20Rey%20Cola%C3%A7o%2038A%2C%202790-017%20Carnaxide!5e0!3m2!1spt-PT!2spt!4v1709123456789!5m2!1spt-PT!2spt" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.882195861491!2d-9.237243924036136!3d38.71120247125345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ec96317b96637%3A0xc331f0f089692994!2sAl.%20Ant%C3%B3nio%20S%C3%A9rgio%207%2C%202795-023%20Linda-a-Velha!5e0!3m2!1spt-PT!2spt!4v1709123456789!5m2!1spt-PT!2spt" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 

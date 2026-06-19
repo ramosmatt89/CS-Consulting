@@ -56,9 +56,12 @@ const Footer: React.FC = () => {
                 <Mail className="w-4 h-4 text-[#202c44] mt-0.5 flex-shrink-0" />
                 <span className="break-all">geral@cs-consulting.pt</span>
               </li>
-              <li className="flex items-start gap-3 text-gray-600 text-sm">
+              <li className="flex items-start gap-3 text-gray-600 text-sm leading-relaxed">
                 <MapPin className="w-4 h-4 text-[#202c44] mt-0.5 flex-shrink-0" />
-                <span>Carnaxide, Portugal</span>
+                <span className="font-medium">
+                  <span className="block lg:whitespace-nowrap">Alameda António Sérgio, n.º 7, 2G</span>
+                  <span className="block lg:whitespace-nowrap">2795-023 Linda-a-Velha</span>
+                </span>
               </li>
             </ul>
           </div>

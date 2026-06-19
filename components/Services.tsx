@@ -89,15 +89,15 @@ const Services: React.FC = () => {
         </div>
 
         {/* Mobile Navigation Grid */}
-        <div className="grid grid-cols-2 gap-3 mb-10 lg:hidden reveal reveal-delay-1">
+        <div className="grid grid-cols-2 gap-4 mb-10 lg:hidden reveal reveal-delay-1">
           {serviceCategories.map((cat, idx) => (
             <button
               key={cat.id}
               onClick={() => setActiveTab(idx)}
-              className={`py-4 px-2 rounded-2xl font-bold text-[10px] uppercase tracking-widest transition-all duration-500 border shadow-sm ${
+              className={`py-5 px-3 rounded-2xl font-black text-[10px] uppercase tracking-widest transition-all duration-500 border ${
                 activeTab === idx 
-                ? 'bg-[#202c44] text-white border-[#202c44] shadow-lg scale-[1.05]' 
-                : 'bg-white text-gray-500 border-gray-100 hover:border-blue-200'
+                ? 'bg-[#202c44] text-white border-[#202c44] shadow-[0_20px_40px_-5px_rgba(32,44,68,0.3)] scale-[1.04] z-10' 
+                : 'bg-white text-gray-500 border-blue-600/10 shadow-[0_15px_35px_-10px_rgba(37,99,235,0.1)] hover:border-blue-600/20'
               }`}
             >
               {cat.label}
@@ -106,15 +106,15 @@ const Services: React.FC = () => {
         </div>
 
         {/* Desktop Navigation Tabs */}
-        <div className="hidden lg:flex flex-wrap gap-4 mb-12 reveal reveal-delay-1">
+        <div className="hidden lg:flex flex-wrap gap-5 mb-12 reveal reveal-delay-1">
           {serviceCategories.map((cat, idx) => (
             <button
               key={cat.id}
               onClick={() => setActiveTab(idx)}
-              className={`px-10 py-5 rounded-2xl md:rounded-3xl font-black text-xs uppercase tracking-[0.2em] transition-all duration-500 border shadow-sm ${
+              className={`px-12 py-6 rounded-3xl font-black text-xs uppercase tracking-[0.2em] transition-all duration-500 border ${
                 activeTab === idx 
-                ? 'bg-[#202c44] text-white border-[#202c44] shadow-xl scale-[1.05] z-10' 
-                : 'bg-white text-gray-500 border-gray-100 hover:border-blue-200 hover:bg-gray-50'
+                ? 'bg-[#202c44] text-white border-[#202c44] shadow-[0_30px_60px_-10px_rgba(32,44,68,0.35)] scale-[1.06] z-10' 
+                : 'bg-white text-gray-500 border-blue-600/10 shadow-[0_20px_45px_-15px_rgba(37,99,235,0.12)] hover:border-blue-600/30 hover:bg-gray-50 hover:-translate-y-1'
               }`}
             >
               {cat.label}
