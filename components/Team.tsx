@@ -52,7 +52,7 @@ const Team: React.FC = () => {
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8 reveal">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
           <div className="max-w-2xl text-center md:text-left">
             <div className="inline-flex items-center gap-3 mb-4">
               <span className="w-8 h-px bg-blue-500"></span>
@@ -95,7 +95,7 @@ const Team: React.FC = () => {
         {/* Carousel Viewport - Full Width Mobile (One post at a time) */}
         <div 
           ref={scrollRef}
-          className="flex gap-0 sm:gap-6 lg:gap-10 overflow-x-auto snap-x snap-mandatory pb-12 hide-scrollbar -mx-6 px-6 md:mx-0 md:px-0 reveal reveal-delay-2"
+          className="flex gap-0 sm:gap-6 lg:gap-10 overflow-x-auto snap-x snap-mandatory pb-12 hide-scrollbar -mx-6 px-6 md:mx-0 md:px-0"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {teamMembers.map((member) => (
@@ -106,13 +106,15 @@ const Team: React.FC = () => {
               <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-[#161f2e] mb-6 md:mb-8 shadow-2xl mx-auto max-w-[90vw] sm:max-w-none transition-all duration-700 group-hover:translate-y-[-10px] group-hover:shadow-blue-500/10">
                 {/* Photo with B&W effect only on Desktop (md+) */}
                 <div className="absolute inset-0 grayscale md:grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-110"
-                    loading="lazy"
-                    decoding="async"
-                  />
+              <img 
+                src={member.image} 
+                alt={member.name}
+                className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-110"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="750"
+              />
                 </div>
                 
                 {/* Overlay Gradient */}
@@ -127,7 +129,7 @@ const Team: React.FC = () => {
               </div>
 
               {/* Info Container */}
-              <div className="px-2 text-center reveal">
+              <div className="px-2 text-center">
                 <h3 className="text-xl md:text-2xl font-bold text-white mb-1 transition-colors group-hover:text-blue-400">
                   {member.name}
                 </h3>
@@ -150,7 +152,7 @@ const Team: React.FC = () => {
         </div>
 
         {/* Mobile Indicator Bar */}
-        <div className="lg:hidden w-full h-px bg-white/5 mt-4 relative reveal">
+        <div className="lg:hidden w-full h-px bg-white/5 mt-4 relative">
           <div 
             className="absolute top-0 left-0 h-full bg-blue-500 transition-all duration-200"
             style={{ width: `${scrollProgress}%` }}

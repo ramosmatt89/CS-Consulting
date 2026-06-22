@@ -15,7 +15,7 @@ const About: React.FC = () => {
       <div className="container mx-auto px-6 lg:px-16 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           
-          <div className="lg:w-1/2 relative group reveal">
+          <div className="lg:w-1/2 relative group">
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.12)] border-4 border-white transition-all duration-700 group-hover:scale-[1.02] bg-gray-50 aspect-[4/3]">
               <img 
                 src="https://www.dropbox.com/scl/fi/16y0oq3r33p4oxdk3mts9/Sobre-a-CS.jpeg?rlkey=0cg4uxmwwj5kzse9svfpuyyo3&st=6yrxrxmx&raw=1" 
@@ -32,17 +32,17 @@ const About: React.FC = () => {
           </div>
 
           <div className="lg:w-1/2">
-            <div className="inline-flex items-center gap-3 mb-6 reveal">
+            <div className="inline-flex items-center gap-3 mb-6">
               <span className="w-8 h-px bg-blue-600"></span>
               <span className="text-blue-600 font-bold uppercase tracking-[0.3em] text-[11px]">Sobre a CS Consulting</span>
             </div>
             
-            <h2 className="text-4xl md:text-5xl font-black text-[#121a2a] mb-8 leading-tight uppercase tracking-tighter reveal reveal-delay-1">
+            <h2 className="text-4xl md:text-5xl font-black text-[#121a2a] mb-8 leading-tight uppercase tracking-tighter">
               Tradição no Rigor <br /> 
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#202c44] to-blue-600">Inovação na Gestão</span>
             </h2>
             
-            <div className="space-y-6 text-gray-600 text-lg font-light leading-relaxed reveal reveal-delay-2">
+            <div className="space-y-6 text-gray-600 text-lg font-light leading-relaxed">
               <p>
                 A <strong>CS Consulting & Accounting</strong> nasceu para simplificar a vida de empresários e profissionais em Portugal. O nosso espaço em Carnaxide reflete a nossa cultura: moderno, organizado e focado em resultados.
               </p>
@@ -52,14 +52,14 @@ const About: React.FC = () => {
             </div>
 
             <div className="grid sm:grid-cols-2 gap-6 mt-12">
-              <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-blue-200 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl group reveal reveal-delay-3">
+              <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-blue-200 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl group">
                 <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-[#202c44] mb-4 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
                   <ShieldCheck size={24} />
                 </div>
                 <h4 className="font-bold text-[#121a2a] mb-2">Total Compliance</h4>
                 <p className="text-sm text-gray-500">Segurança absoluta no cumprimento de prazos e leis fiscais.</p>
               </div>
-              <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-blue-200 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl group reveal reveal-delay-3">
+              <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-blue-200 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl group">
                 <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-[#202c44] mb-4 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
                   <Target size={24} />
                 </div>
@@ -68,7 +68,7 @@ const About: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-12 flex flex-wrap items-center gap-8 reveal reveal-delay-3">
+            <div className="mt-12 flex flex-wrap items-center gap-8">
               <a href="#contacto-detalhes" className="text-[#202c44] font-black text-sm uppercase tracking-widest border-b-2 border-[#202c44] pb-1 hover:text-blue-600 hover:border-blue-600 hover:translate-x-1 transition-all">
                 Visite o nosso escritório
               </a>

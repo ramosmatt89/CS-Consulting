@@ -18,6 +18,8 @@ const Footer: React.FC = () => {
                 className="h-28 md:h-24 w-auto object-contain brightness-0 opacity-80" 
                 loading="lazy"
                 decoding="async"
+                width="200"
+                height="100"
               />
               <p className="text-[10px] font-bold text-gray-400 tracking-[0.3em] uppercase mt-2">Premium Accounting</p>
             </div>

@@ -17,20 +17,20 @@ const Benefits: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           
           <div className="lg:w-1/2">
-            <div className="inline-flex items-center gap-3 mb-4 reveal">
+            <div className="inline-flex items-center gap-3 mb-4">
               <span className="w-8 h-px bg-blue-600"></span>
               <span className="text-blue-600 font-bold uppercase tracking-[0.3em] text-[11px]">Fatores diferenciadores</span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-black text-[#121a2a] mb-8 uppercase tracking-tighter leading-tight reveal reveal-delay-1">
+            <h2 className="text-3xl md:text-5xl font-black text-[#121a2a] mb-8 uppercase tracking-tighter leading-tight">
               Porquê escolher a <br /> <span className="text-blue-600">CS Consulting?</span>
             </h2>
-            <p className="text-gray-500 mb-12 text-lg font-light leading-relaxed max-w-xl reveal reveal-delay-2">
+            <p className="text-gray-500 mb-12 text-lg font-light leading-relaxed max-w-xl">
               Diferenciamo-nos pela agilidade e pelo conhecimento profundo da legislação fiscal portuguesa. O nosso objetivo é que o cliente foque no seu negócio enquanto nós cuidamos dos números.
             </p>
             
             <div className="grid gap-5">
               {benefits.map((b, idx) => (
-                <div key={idx} className={`flex items-center gap-5 p-5 bg-white rounded-2xl border border-gray-100 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 group reveal reveal-delay-${idx % 3 + 1}`}>
+                <div key={idx} className={`flex items-center gap-5 p-5 bg-white rounded-2xl border border-gray-100 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 group`}>
                   <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center text-[#202c44] group-hover:bg-blue-600 group-hover:text-white group-hover:rotate-[360deg] transition-all duration-700 shadow-sm">
                     {b.icon}
                   </div>
@@ -40,7 +40,7 @@ const Benefits: React.FC = () => {
             </div>
           </div>
 
-          <div className="lg:w-1/2 w-full reveal reveal-delay-3 px-4 lg:px-0">
+          <div className="lg:w-1/2 w-full px-4 lg:px-0">
             <div className="grid grid-cols-2 gap-4 md:gap-8 items-start">
               {/* Imagem 1 - Ferramentas de Contabilidade */}
               <div className="relative group overflow-hidden rounded-2xl shadow-2xl aspect-[4/5] bg-gray-100 transition-all duration-700 hover:shadow-blue-500/20 -translate-y-8">

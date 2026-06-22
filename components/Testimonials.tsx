@@ -51,12 +51,12 @@ const Testimonials: React.FC = () => {
   return (
     <section id="depoimentos" className="py-16 md:py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 reveal">
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#202c44] mb-4">O que dizem os nossos clientes</h2>
           <p className="text-gray-500 max-w-xl mx-auto">Parcerias de longo prazo baseadas na transparência e resultados.</p>
         </div>
 
-        <div className="relative max-w-4xl mx-auto reveal reveal-delay-2">
+        <div className="relative max-w-4xl mx-auto">
           {/* Decorative Quote Mark */}
           <div className="absolute -top-10 -left-10 opacity-5 text-[#202c44] hidden md:block">
             <Quote size={120} />
@@ -98,7 +98,7 @@ const Testimonials: React.FC = () => {
           </div>
           
           {/* Mobile Buttons */}
-          <div className="flex justify-center gap-6 mt-8 md:hidden reveal">
+          <div className="flex justify-center gap-6 mt-8 md:hidden">
               <button onClick={prev} className="p-4 rounded-xl bg-[#202c44] text-white shadow-lg active:scale-90"><ChevronLeft /></button>
               <button onClick={next} className="p-4 rounded-xl bg-[#202c44] text-white shadow-lg active:scale-90"><ChevronRight /></button>
           </div>

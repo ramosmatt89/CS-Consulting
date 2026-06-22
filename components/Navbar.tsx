@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 interface NavbarProps {
@@ -7,16 +7,7 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ currentPath }) => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navLinks = [
     { name: 'Home', href: '#home' },
@@ -30,12 +21,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPath }) => {
 
   return (
     <nav 
-      className={`top-0 left-0 right-0 z-50 transition-all duration-500 w-full
-        ${isScrolled 
-          ? 'fixed bg-[#121a2a]/95 backdrop-blur-md py-4 md:absolute md:bg-transparent md:pt-12 lg:pt-16' 
-          : 'fixed bg-transparent pt-8 md:absolute md:pt-12 lg:pt-16 pb-8'
-        }
-      `}
+      className={`top-0 left-0 right-0 z-50 transition-all duration-500 w-full absolute bg-transparent pt-8 md:pt-12 lg:pt-16 pb-8`}
     >
       <div className="container mx-auto px-6 lg:px-16 flex justify-between items-center">
         <a href="#home" className="flex items-center group h-24 md:h-28 lg:h-36">
@@ -46,6 +32,8 @@ const Navbar: React.FC<NavbarProps> = ({ currentPath }) => {
             // @ts-ignore
             fetchpriority="high"
             decoding="async"
+            width="250"
+            height="80"
           />
         </a>
 

@@ -62,19 +62,12 @@ const serviceCategories = [
 const Services: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
 
-  // Re-trigger reveal when tab changes
-  useEffect(() => {
-    if ((window as any).initReveal) {
-      (window as any).initReveal();
-    }
-  }, [activeTab]);
-
   return (
     <section id="servicos" className="py-16 md:py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         
         {/* Header Section */}
-        <div className="max-w-4xl mb-12 md:mb-16 reveal">
+        <div className="max-w-4xl mb-12 md:mb-16">
           <div className="inline-flex items-center gap-3 mb-3">
             <span className="w-8 h-px bg-blue-600"></span>
             <span className="text-blue-600 font-bold uppercase tracking-[0.3em] text-[10px]">As nossas soluções</span>
@@ -89,7 +82,7 @@ const Services: React.FC = () => {
         </div>
 
         {/* Mobile Navigation Grid */}
-        <div className="grid grid-cols-2 gap-4 mb-10 lg:hidden reveal reveal-delay-1">
+        <div className="grid grid-cols-2 gap-4 mb-10 lg:hidden">
           {serviceCategories.map((cat, idx) => (
             <button
               key={cat.id}
@@ -106,7 +99,7 @@ const Services: React.FC = () => {
         </div>
 
         {/* Desktop Navigation Tabs */}
-        <div className="hidden lg:flex flex-wrap gap-5 mb-12 reveal reveal-delay-1">
+        <div className="hidden lg:flex flex-wrap gap-5 mb-12">
           {serviceCategories.map((cat, idx) => (
             <button
               key={cat.id}
@@ -124,7 +117,7 @@ const Services: React.FC = () => {
 
         {/* Tab Content Area */}
         <div key={activeTab} className="fade-in-content">
-          <div className="bg-white p-8 md:p-12 md:py-16 rounded-2xl shadow-[0_50px_100px_-20px_rgba(37,99,235,0.18)] border border-blue-600/20 mb-8 md:mb-12 reveal">
+          <div className="bg-white p-8 md:p-12 md:py-16 rounded-2xl shadow-[0_50px_100px_-20px_rgba(37,99,235,0.18)] border border-blue-600/20 mb-8 md:mb-12">
             <div className="max-w-4xl">
               <h3 className="text-2xl md:text-3xl font-black text-[#202c44] mb-6 uppercase tracking-tighter">
                 {serviceCategories[activeTab].label}
@@ -140,7 +133,7 @@ const Services: React.FC = () => {
             {serviceCategories[activeTab].items.map((item, idx) => (
               <div 
                 key={idx}
-                className={`bg-[#202c44] p-8 md:p-10 rounded-2xl shadow-xl border border-white/5 hover:shadow-[0_40px_100px_rgba(32,44,68,0.2)] hover:border-blue-500/30 transition-all duration-700 group flex flex-col h-full reveal reveal-delay-${(idx % 2) + 1}`}
+                className={`bg-[#202c44] p-8 md:p-10 rounded-2xl shadow-xl border border-white/5 hover:shadow-[0_40px_100px_rgba(32,44,68,0.2)] hover:border-blue-500/30 transition-all duration-700 group flex flex-col h-full`}
               >
                 <div className="w-14 h-14 md:w-16 md:h-16 bg-white/5 text-blue-400 rounded-xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 transform group-hover:rotate-[15deg] group-hover:scale-110 shadow-sm">
                   {item.icon}
