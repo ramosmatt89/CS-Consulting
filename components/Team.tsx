@@ -101,7 +101,7 @@ const Team: React.FC = () => {
           {teamMembers.map((member) => (
             <div 
               key={member.id}
-              className="flex-none w-full sm:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-5rem)/3)] snap-center sm:snap-start group"
+              className="flex-none w-full md:w-[calc((100%-3rem)/3)] xl:w-[calc((100%-7.5rem)/4)] snap-center md:snap-start group"
             >
               <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-[#161f2e] mb-6 md:mb-8 shadow-2xl mx-auto max-w-[90vw] sm:max-w-none transition-all duration-700 group-hover:translate-y-[-10px] group-hover:shadow-blue-500/10">
                 {/* Photo with B&W effect only on Desktop (md+) */}
