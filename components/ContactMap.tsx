@@ -45,6 +45,10 @@ const ContactMap: React.FC = () => {
           <div className="lg:w-7/12 xl:w-8/12 order-1 lg:order-2">
             <div className="bg-white rounded-2xl p-8 md:p-12 xl:p-16 shadow-[0_50px_100px_-20px_rgba(37,99,235,0.18)] border border-blue-600/20 relative z-10">
               <div className="mb-10 text-center lg:text-left">
+                <div className="flex items-center justify-center lg:justify-start gap-3 mb-3">
+                  <span className="w-8 h-px bg-blue-600"></span>
+                  <span className="text-blue-600 font-bold uppercase tracking-[0.3em] text-[10px]">Contacto</span>
+                </div>
                 <h3 className="text-3xl md:text-4xl font-black text-[#121a2a] uppercase tracking-tighter mb-4">FALE <span className="text-blue-600">CONNOSCO</span></h3>
                 <p className="text-gray-400 text-sm font-medium max-w-lg mx-auto lg:mx-0">Deixe os seus dados e um consultor entrará em contacto para uma análise estratégica gratuita.</p>
               </div>
@@ -148,7 +152,10 @@ const ContactMap: React.FC = () => {
           */}
           <div className="lg:w-5/12 xl:w-4/12 flex flex-col order-2 lg:order-1">
             <div className="mb-10 text-center lg:text-left">
-              <span className="text-blue-600 font-bold uppercase tracking-[0.3em] text-[10px] mb-3 block">Localização</span>
+              <div className="flex items-center justify-center lg:justify-start gap-3 mb-3">
+                <span className="w-8 h-px bg-blue-600"></span>
+                <span className="text-blue-600 font-bold uppercase tracking-[0.3em] text-[10px]">Localização</span>
+              </div>
               <h2 className="text-3xl md:text-4xl font-black text-[#121a2a] mb-6 uppercase tracking-tighter">Onde Estamos</h2>
               <div className="w-16 h-1 bg-blue-600 rounded-full mx-auto lg:mx-0"></div>
             </div>

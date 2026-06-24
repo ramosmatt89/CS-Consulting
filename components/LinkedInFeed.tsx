@@ -4,12 +4,22 @@ import React, { useEffect } from 'react';
 const LinkedInFeed: React.FC = () => {
   useEffect(() => {
     // Load Elfsight script if not already present
-    if (!document.querySelector('script[src="https://elfsightcdn.com/platform.js"]')) {
-      const script = document.createElement('script');
-      script.src = 'https://elfsightcdn.com/platform.js';
+    const scriptUrl = 'https://static.elfsight.com/platform/platform.js';
+    let script = document.querySelector(`script[src="${scriptUrl}"]`) as HTMLScriptElement;
+    
+    if (!script) {
+      script = document.createElement('script');
+      script.src = scriptUrl;
       script.async = true;
-      document.currentScript ? document.currentScript.parentNode?.insertBefore(script, document.currentScript) : document.head.appendChild(script);
+      script.defer = true;
+      document.head.appendChild(script);
     }
+
+    return () => {
+      // Optional: We usually keep platform.js globally once loaded to avoid re-initializing 
+      // but if the user is seeing "Failed to fetch" it might be worth a cleaner state.
+      // Actually, standard practice for Elfsight is to keep it, but let's ensure it doesn't leak.
+    };
   }, []);
 
   return (

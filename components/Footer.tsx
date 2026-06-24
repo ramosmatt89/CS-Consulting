@@ -3,7 +3,7 @@ import React from 'react';
 import { Phone, Mail, MapPin, Instagram, Linkedin, Clock } from 'lucide-react';
 
 const Footer: React.FC = () => {
-  const logoUrl = "https://www.dropbox.com/scl/fi/2n6fkrxgj2t46hfxaq8ta/cs-horizontal-white.png?rlkey=z1gpl3r3hzwzkcnkgicvln8g3&st=vicgxtfv&raw=1";
+  const logoUrl = "https://i.ibb.co/TGcwC17/cs-horizontal-color.png";
 
   return (
     <footer className="bg-gray-50 pt-20 pb-20 border-t border-gray-100">
@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
               <img 
                 src={logoUrl} 
                 alt="CS Consulting" 
-                className="h-28 md:h-24 w-auto object-contain brightness-0 opacity-80" 
+                className="h-28 md:h-32 w-auto object-contain md:-ml-3" 
                 loading="lazy"
                 decoding="async"
                 width="200"
