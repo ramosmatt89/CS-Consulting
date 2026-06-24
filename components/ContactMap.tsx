@@ -36,7 +36,7 @@ const ContactMap: React.FC = () => {
   return (
     <section id="contacto-detalhes" className="py-16 md:py-24 lg:pt-28 lg:pb-36 bg-white relative z-20 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-16">
-        <div className="flex flex-col lg:flex-row gap-16 xl:gap-24">
+        <div className="flex flex-col lg:flex-row lg:items-end gap-16 xl:gap-24">
           
           {/* Coluna: Formulário de Contacto 
               Mobile & Tablet: Aparece primeiro (order-1)
@@ -146,7 +146,7 @@ const ContactMap: React.FC = () => {
               Mobile & Tablet: Aparece depois (order-2)
               Desktop (lg+): Aparece primeiro (lg:order-1)
           */}
-          <div className="lg:w-5/12 xl:w-4/12 flex flex-col justify-center order-2 lg:order-1">
+          <div className="lg:w-5/12 xl:w-4/12 flex flex-col order-2 lg:order-1">
             <div className="mb-10 text-center lg:text-left">
               <span className="text-blue-600 font-bold uppercase tracking-[0.3em] text-[10px] mb-3 block">Localização</span>
               <h2 className="text-3xl md:text-4xl font-black text-[#121a2a] mb-6 uppercase tracking-tighter">Onde Estamos</h2>
