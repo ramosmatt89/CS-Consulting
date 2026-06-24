@@ -17,7 +17,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPath }) => {
     { name: 'Contacto', href: '#contacto-detalhes' },
   ];
 
-  const logoUrl = "https://www.dropbox.com/scl/fi/2n6fkrxgj2t46hfxaq8ta/cs-horizontal-white.png?rlkey=z1gpl3r3hzwzkcnkgicvln8g3&st=vicgxtfv&raw=1";
+  const logoUrl = "https://www.dropbox.com/scl/fi/2n6fkrxgj2t46hfxaq8ta/cs-horizontal-white.png?rlkey=z1gpl3r3hzwzkcnkgicvln8g3&raw=1";
 
   return (
     <nav 
