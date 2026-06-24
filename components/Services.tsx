@@ -13,23 +13,23 @@ const serviceCategories = [
     id: 'contabilidade',
     label: 'Contabilidade',
     shortLabel: 'Contab.',
-    description: 'Soluções personalizadas para fortalecer a sua eficiência financeira e garantir conformidade legal.',
+    description: 'Sabemos que a contabilidade pode parecer complicada — por isso simplificamos tudo, para que possa focar-se em fazer crescer o seu negócio.',
     items: [
-      { title: 'Contabilidade Geral e Analítica', desc: 'Gestão completa das contas da sua empresa, adaptada às necessidades do seu negócio.', icon: <BookOpen size={24} /> },
-      { title: 'Relatórios Financeiros', desc: 'Balanços e demonstrações de resultados para apoio à gestão estratégica.', icon: <FileText size={24} /> },
-      { title: 'Obrigações Legais', desc: 'Cumprimento rigoroso das normas fiscais e contabilísticas em vigor.', icon: <Shield size={24} /> },
-      { title: 'Escritório Virtual', desc: 'Sede social e gestão de correspondência para a sua empresa com flexibilidade total.', icon: <Compass size={24} /> },
+      { title: 'Contabilidade Geral e Analítica', desc: 'Registo contabilístico completo, com organização por centros de custo/analíticos para que saiba exatamente onde está a gastar e a ganhar.', icon: <BookOpen size={24} /> },
+      { title: 'Demonstrações Financeiras e Reporte', desc: 'Balanços, demonstrações de resultados e análises financeiras claras para apoiar as suas decisões de gestão.', icon: <FileText size={24} /> },
+      { title: 'Obrigações Fiscais e Legais', desc: 'Cumprimento integral de prazos e exigências fiscais, sem sobressaltos.', icon: <Shield size={24} /> },
+      { title: 'Contabilidade Digital', desc: 'Registos automáticos a partir de documentos digitais, arquivo organizado sem papel e de acesso em tempo real.', icon: <Compass size={24} /> },
     ]
   },
   {
     id: 'rh',
     label: 'Recursos Humanos',
     shortLabel: 'RH',
-    description: 'Gestão eficaz do capital humano, garantindo conformidade legal e o melhor desempenho da sua equipa.',
+    description: 'O processamento salarial é a base de uma gestão de RH sem falhas — e é nisso que somos especialistas.',
     items: [
-      { title: 'Processamento de Salários', desc: 'Gestão salarial, recibos de vencimento e envio de declarações fiscais.', icon: <Users size={24} /> },
-      { title: 'Segurança Social e AT', desc: 'Cumprimento de todas as obrigações legais e entrega do Relatório Único.', icon: <Scale size={24} /> },
-      { title: 'Gestão de Contratos', desc: 'Apoio especializado na elaboração de contratos de trabalho e horários.', icon: <FileSignature size={24} /> },
+      { title: 'Processamento de Salários', desc: 'Gestão do processamento salarial, incluindo o preenchimento de recibos de vencimento e envio das declarações fiscais.', icon: <Users size={24} /> },
+      { title: 'Cumprimento das Obrigações Legais', desc: 'Acompanhamento de todas as obrigações com a Segurança Social e a AT, incluindo a entrega do Relatório Único.', icon: <Scale size={24} /> },
+      { title: 'Consultoria em Gestão de Contratos', desc: 'Aconselhamento especializado sobre as condições contratuais mais adequadas a cada atividade, em articulação com o nosso parceiro jurídico.', icon: <FileSignature size={24} /> },
       { title: 'Estratégia de RH', desc: 'Políticas de gestão de pessoas para otimizar a produtividade e o bem-estar.', icon: <Briefcase size={24} /> },
     ]
   },
@@ -40,9 +40,9 @@ const serviceCategories = [
     description: 'Acompanhamento estratégico para melhorar a eficiência operacional e o crescimento do seu negócio.',
     items: [
       { title: 'Planeamento Estratégico', desc: 'Desenvolvimento de planos de negócio focados no crescimento sustentável.', icon: <Compass size={24} /> },
-      { title: 'Avaliações Económicas', desc: 'Estudos de viabilidade e due diligence para decisões informadas.', icon: <PieChart size={24} /> },
-      { title: 'Fusões e Aquisições', desc: 'Acompanhamento completo em processos de reestruturação empresarial.', icon: <Landmark size={24} /> },
-      { title: 'Otimização de Processos', desc: 'Melhoria contínua dos fluxos financeiros para aumentar a rentabilidade.', icon: <Settings size={24} /> },
+      { title: 'Consultoria Económico-Financeira', desc: 'Análises detalhadas para sustentar decisões de investimento e expansão.', icon: <PieChart size={24} /> },
+      { title: 'Fusões e Aquisições', desc: 'Acompanhamento completo em processos de reestruturação empresarial, em parceria com especialistas dedicados a cada etapa do processo.', icon: <Landmark size={24} /> },
+      { title: 'Consultoria Fiscal', desc: 'Apoio à otimização fiscal da sua empresa, identificando oportunidades legais para reduzir a carga tributária.', icon: <Settings size={24} /> },
     ]
   },
   {
@@ -51,10 +51,22 @@ const serviceCategories = [
     shortLabel: 'IRS',
     description: 'Gestão especializada para minimizar a carga fiscal e otimizar a sua situação tributária individual.',
     items: [
-      { title: 'Declaração de IRS', desc: 'Elaboração e submissão com foco na otimização de impostos a pagar.', icon: <Calculator size={24} /> },
-      { title: 'Planeamento Fiscal', desc: 'Consultoria personalizada para maximização de benefícios fiscais.', icon: <Target size={24} /> },
-      { title: 'Residentes Não Habituais', desc: 'Apoio na candidatura e gestão do regime de RNH em Portugal.', icon: <Globe size={24} /> },
-      { title: 'Impostos sobre Rendimento', desc: 'Análise detalhada da tributação do rendimento individual.', icon: <Wallet size={24} /> },
+      { title: 'Declaração de IRS', desc: 'Elaboração e submissão da declaração de IRS, abrangendo as diversas categorias de rendimentos.', icon: <Calculator size={24} /> },
+      { title: 'Planeamento Fiscal', desc: 'Consultoria personalizada para maximização de benefícios fiscais e otimização da carga fiscal.', icon: <Target size={24} /> },
+      { title: 'Residentes não Habituais', desc: 'Apoio na candidatura e gestão do regime de RNH em Portugal.', icon: <Globe size={24} /> },
+      { title: 'Acompanhamento Pós-Entrega', desc: 'Suporte em caso de notificações ou pedidos de esclarecimento da AT.', icon: <Wallet size={24} /> },
+    ]
+  },
+  {
+    id: 'escritorio-virtual',
+    label: 'Escritório Virtual',
+    shortLabel: 'Virtual',
+    description: 'Tenha uma presença empresarial em Lisboa sem os custos de um escritório físico.',
+    items: [
+      { title: 'Sede Fiscal', desc: 'Domiciliação da sua empresa num endereço profissional e de confiança.', icon: <Compass size={24} /> },
+      { title: 'Receção de Correspondência', desc: 'Gestão e reencaminhamento de toda a correspondência recebida.', icon: <FileText size={24} /> },
+      { title: 'Apoio Administrativo', desc: 'Acompanhamento na gestão de prazos e formalidades junto de entidades oficiais.', icon: <Settings size={24} /> },
+      { title: 'Espaços de Reunião', desc: 'Acesso a salas equipadas sempre que precisar de receber clientes ou parceiros.', icon: <Users size={24} /> },
     ]
   }
 ];

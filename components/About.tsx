@@ -19,7 +19,7 @@ const About: React.FC = () => {
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.12)] border-4 border-white transition-all duration-700 group-hover:scale-[1.02] bg-gray-50 aspect-[4/3]">
               <img 
                 src="https://www.dropbox.com/scl/fi/16y0oq3r33p4oxdk3mts9/Sobre-a-CS.jpeg?rlkey=0cg4uxmwwj5kzse9svfpuyyo3&st=6yrxrxmx&raw=1" 
-                alt="CS Consulting Office - Carnaxide" 
+                alt="CS Consulting Office - Linda-a-Velha" 
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 loading="lazy"
                 decoding="async"
@@ -44,7 +44,7 @@ const About: React.FC = () => {
             
             <div className="space-y-6 text-gray-600 text-lg font-light leading-relaxed">
               <p>
-                A <strong>CS Consulting & Accounting</strong> nasceu para simplificar a vida de empresários e profissionais em Portugal. O nosso espaço em Carnaxide reflete a nossa cultura: moderno, organizado e focado em resultados.
+                A <strong>CS Consulting & Accounting</strong> nasceu para simplificar a vida de empresários e profissionais em Portugal. O nosso espaço em Linda-a-Velha reflete a nossa cultura: moderno, organizado e focado em resultados.
               </p>
               <p>
                 Acreditamos que a contabilidade não deve ser apenas um cumprimento de obrigações, mas uma ferramenta poderosa de <strong>tomada de decisão</strong>. Por isso, aliamos a proximidade do atendimento presencial à eficiência das ferramentas digitais.
