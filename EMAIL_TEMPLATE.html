@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Lead - CS Consulting</title>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #334155;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #ffffff;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(18, 26, 42, 0.08);
+            border: 1px solid #f1f5f9;
+        }
+        .content {
+            padding: 40px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 900;
+            color: #121a2a;
+            margin: 0 0 32px 0;
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+        }
+        .field {
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        .field:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .label {
+            font-size: 10px;
+            font-weight: 800;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .value {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e293b;
+            margin: 0;
+        }
+        .message-box {
+            background-color: #f8fafc;
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid #f1f5f9;
+            margin-top: 8px;
+            font-style: italic;
+            color: #475569;
+        }
+        .footer {
+            background-color: #f8fafc;
+            padding: 32px 40px;
+            text-align: center;
+            border-top: 1px solid #f1f5f9;
+        }
+        .footer p {
+            font-size: 13px;
+            color: #64748b;
+            margin: 4px 0;
+        }
+        @media only screen and (max-width: 600px) {
+            .container {
+                margin: 0;
+                border-radius: 0;
+            }
+            .content {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Novo Lead Recebido</h1>
+            
+            <div class="field">
+                <span class="label">Nome ou Empresa</span>
+                <p class="value">{{name}}</p>
+            </div>
+            
+            <div class="field">
+                <span class="label">Email de Contacto</span>
+                <p class="value"><a href="mailto:{{email}}" style="color: #2563eb; text-decoration: none;">{{email}}</a></p>
+            </div>
+            
+            <div class="field">
+                <span class="label">Telemóvel</span>
+                <p class="value">{{phone}}</p>
+            </div>
+            
+            <div class="field">
+                <span class="label">Mensagem</span>
+                <div class="message-box">
+                    {{message}}
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p><strong>CS Consulting & Accounting</strong></p>
+            <p>Linda-a-Velha, Portugal</p>
+            <p><a href="https://cs-consulting.pt" style="color: #64748b; text-decoration: none;">www.cs-consulting.pt</a></p>
+        </div>
+    </div>
+</body>
+</html>
