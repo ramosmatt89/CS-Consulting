@@ -13,7 +13,7 @@ const ContactMap: React.FC = () => {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      const response = await fetch('https://hook.eu2.make.com/i6tqoejykggfmr69mvwtzrvkom8b4oxq', {
+      const response = await fetch('https://hook.eu1.make.com/tsx291ksod6p5ddcaiyyfcos4l21ya5z', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
