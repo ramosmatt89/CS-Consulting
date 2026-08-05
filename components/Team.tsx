@@ -7,9 +7,9 @@ const teamMembers = [
   { id: 2, name: "Tiago Domingues", role: "CO-CEO", image: "https://i.ibb.co/3mRgFQQw/Tiago-melhorada.png", email: "tiago.domingues@cs-consulting.pt" },
   { id: 3, name: "Raquel Branquinho", role: "Manager Accountant", image: "https://i.ibb.co/XkbFB9jj/Raquel.jpg", email: "raquel.branquinho@cs-consulting.pt" },
   { id: 4, name: "Ana Silva", role: "Manager Accountant", image: "https://i.ibb.co/ZpFXkR0m/Ana.jpg", email: "ana.silva@cs-consulting.pt" },
-  { id: 6, name: "Rosa Ferreira", role: "Accountant", image: "https://i.ibb.co/BRvN8KF/Rosa-melhorada.png", email: "rosa.ferreira@cs-consulting.pt" },
-  { id: 7, name: "Inês Martins", role: "Accountant", image: "https://i.ibb.co/3YzYHXDS/Ine-s.png", email: "ines.martins@cs-consulting.pt" },
   { id: 5, name: "Carla Silva", role: "Senior Accountant", image: "https://i.ibb.co/mVqcwK4L/Carla.png", email: "carla.silva@cs-consulting.pt" },
+  { id: 6, name: "Rosa Ferreira", role: "Accountant", image: "https://i.ibb.co/BRvN8KF/Rosa-melhorada.png", email: "rosa.ferreira@cs-consulting.pt" },
+  { id: 7, name: "Inês Martins", role: "Accountant", image: "https://i.ibb.co/PZSNHsYy/Ine-s.jpg", email: "ines.martins@cs-consulting.pt" },
 ];
 
 const Team: React.FC = () => {
