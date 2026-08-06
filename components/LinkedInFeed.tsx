@@ -40,7 +40,6 @@ const LinkedInFeed: React.FC = () => {
           <div className="bg-white rounded-2xl pt-8 px-5 pb-2 md:pt-16 md:px-12 shadow-[0_50px_100px_-20px_rgba(37,99,235,0.18)] border border-blue-600/20 overflow-hidden">
             <div 
               className="elfsight-app-07faa308-3ae6-43cc-8fbd-64d467d06867" 
-              data-elfsight-app-lazy
               data-elfsight-app-columns="4"
             ></div>
           </div>
